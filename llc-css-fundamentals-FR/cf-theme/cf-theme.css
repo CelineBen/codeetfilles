@@ -1,0 +1,26 @@
+body {
+  border-top: none;
+}
+
+footer i {
+  color: #005EB8;
+}
+
+section h1,
+section h2 {
+  color: #005EB8;
+}
+
+.intro .logo {
+  height: 100px;
+}
+
+.intro .title-bg,
+.last .title-bg {
+  background: rgba(0, 94, 184, 0.8);
+}
+
+.intro .info h2 span,
+.last h3 span {
+  color: #005EB8;
+}
