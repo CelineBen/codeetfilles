@@ -20,7 +20,10 @@ section h2 {
   background: rgba(0, 94, 184, 0.8);
 }
 
-.intro .info h2 span,
+.intro .info h2 span {
+  color: white;
+}
+
 .last h3 span {
   color: #005EB8;
 }
