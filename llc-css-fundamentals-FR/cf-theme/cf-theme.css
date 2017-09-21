@@ -2,8 +2,16 @@ body {
   border-top: none;
 }
 
+.slide {
+  height: calc(100% - 30px);
+}
+
 footer i {
   color: #005EB8;
+}
+
+footer img {
+  width: 20px;
 }
 
 section h1,
