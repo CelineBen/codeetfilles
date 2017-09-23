@@ -44,6 +44,7 @@ section h2 {
   color: #b109aa;
 }
 
-.slide.llc img {
+.slide.centered.llc img {
+  min-width: 300px;
   width: 300px;
 }
