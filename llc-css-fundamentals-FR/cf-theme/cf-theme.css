@@ -2,6 +2,10 @@ body {
   border-top: none;
 }
 
+a:hover {
+  color: #005EB8;
+}
+
 .slide {
   height: calc(100% - 30px);
 }
@@ -34,4 +38,12 @@ section h2 {
 
 .last h3 span {
   color: #005EB8;
+}
+
+.slide.llc h2 {
+  color: #b109aa;
+}
+
+.slide.llc img {
+  width: 300px;
 }
