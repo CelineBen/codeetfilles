@@ -1,0 +1,50 @@
+body {
+  border-top: none;
+}
+
+a:hover {
+  color: #005EB8;
+}
+
+.slide {
+  height: calc(100% - 30px);
+}
+
+footer i {
+  color: #005EB8;
+}
+
+footer img {
+  width: 20px;
+}
+
+section h1,
+section h2 {
+  color: #005EB8;
+}
+
+.intro .logo {
+  height: 100px;
+}
+
+.intro .title-bg,
+.last .title-bg {
+  background: rgba(0, 94, 184, 0.8);
+}
+
+.intro .info h2 span {
+  color: white;
+}
+
+.last h3 span {
+  color: #005EB8;
+}
+
+.slide.llc h2 {
+  color: #b109aa;
+}
+
+.slide.centered.llc img {
+  min-width: 300px;
+  width: 300px;
+}
