@@ -84,8 +84,8 @@
         <section class="slide" data-markdown>
             ##Préparons nos outils de développement
 
-            **[Sublime Text](http://www.sublimetext.com)** - Un éditeur de texte (code) simple et rempli d'outils forts utiles. Si vous êtes incapable de l'installer essayez avec [Notepad++](http://notepad-plus-plus.org/) (Windows) ou [Atom](https://atom.io/) (Mac).
-
+            **[VS Code](https://code.visualstudio.com/)** - Un éditeur de texte (code) simple et rempli d'outils forts utiles. Il faut aussi rajouter l'extension HTML Preview, une fois VS Code installé. Si vous êtes incapable de l'installer essayez avec [Notepad++](http://notepad-plus-plus.org/) (Windows) ou [Atom](https://atom.io/) (Mac).
+            
             **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choisissez un navigateur moderne qui supporte les standards du web et qui possède d'excellents outils de développement. Pour faire de Chrome votre navigateur par défaut suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr). Pour une autre bonne option, essayez Firefox. Visitez [browsehappy.com](http://browsehappy.com) pour plus d'infos sur les navigateurs modernes.
 
             ** Outils de développement/*Developer tools* ** Nous permet d'*inspecter* n'importe quelle page web afin d'étudier sa charpente. Ces outils sont aussi très pratiques pour tester et déboguer votre code. On peut accéder à ces outils de 3 façons:
@@ -115,15 +115,15 @@
             ##Préparons-nous à travailler
 
             Ouvrons nos fichiers de projet dans un navigateur et dans notre éditeur de code.
-
-            1. Ouvrez Sublime Text et cliquez sur **File > Open**.
+            <!--TODO See if laptops will be FR / EN formatted ?-->
+            1. Ouvrez VS Code et cliquez sur **File > Open**  **Fichier > Ouvrir**.
 
                 ![](framework/img/workshop/1-setup.png)
             1. Sélectionnez le dossier **Project** (dans le dossier que vous avez téléchargé aujourd'hui). Sélectionner le dossier en entier et cliquez **Open**.
                 <!-- ![](framework/img/workshop/2-setup.png) -->
-            1. Le contenu du dossier apparaîtra dans la section de gauche de Sublime. Double cliquez sur **index.html** pour l'ouvrir.
+            1. Le contenu du dossier apparaîtra dans la section de gauche de VS Code. Double cliquez sur **index.html** pour l'ouvrir.
                 <!-- ![](framework/img/workshop/3-setup.png) -->
-            1. Clique droit et sélectionnez **Open in Browser**. Cette action ouvrira le fichier HTML dans votre navigateur habituel.
+            1. Une fois dans le fichier **index.html** faites ctrl+MAJ+H. Cette action ouvrira le fichier HTML dans un nouvel onglet et vous permet de voir la page comme dans un navigateur.
 
                 ![](framework/img/workshop/4-setup.png)
 
@@ -434,13 +434,13 @@
             &lt;/head&gt;
             ```
 
-            **Indice de pro!**  Raccourci Sublime Text : tapez "link" + touche 'tab'. Ta da!
+            **Indice de pro!**  Raccourci VS Code : tapez "link" + touche 'tab'. Ta da!
         </section>
 
         <section class="slide" data-markdown>
             ##Exercice #2: Ajoutez des arrière-plans de couleurs (10mins)
             
-            1. Dans Sublime, ouvrez **style.css** (il devrait être vide) situé dans **project > css **. Incluez le fichier dans votre document HTML.
+            1. Dans VS Code, ouvrez **style.css** (il devrait être vide) situé dans **project > css **. Incluez le fichier dans votre document HTML.
             2. Utilisez `background` avec différentes couleurs pour chaque section de votre page. Utilisez un **sélecteur d'élément** pour l'entête (*header*) et des **sélecteurs de classes** pour les sections. Puisqu'il y a plusieurs balises sections, vous devrez utiliser un sélecteur plus spécifique. Voici quelques idées pour vous aider à avancer:
             
                 ```
@@ -877,7 +877,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
 
             Ajoutez la classe `.content-wrap` à chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
 
-            Tout d'abord, pour faciliter l'ajout de notre classe, revenons sur comment minimiser des blocs de code ainsi que sur comment changer la tabulation de plusieurs lignes en même temps dans Sublime.
+            Tout d'abord, pour faciliter l'ajout de notre classe, revenons sur comment minimiser des blocs de code ainsi que sur comment changer la tabulation de plusieurs lignes en même temps dans VS Code.
 
             Votre page devrait ressembler à quelque chose comme ça: [exemple 4](project/examples/4a-content-wrap.html).
 
