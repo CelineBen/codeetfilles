@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Du Code et des Filles: Les bases du CSS pour débutantes</title>
+    <title>Du Code et des Filles: Les bases du HTML et CSS pour débutantes</title>
 
     <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
     <link rel="stylesheet" href="framework/css/slideshow.css">
@@ -17,7 +17,6 @@
 
     <!-- Workshop-specific styles -->
     <link rel="stylesheet" href="framework/css/workshop.css">
-    <link rel="stylesheet" href="framework/css/pdf.css" media="print">
     <link rel="stylesheet" href="ge-theme/ge-theme.css">
 
     <!-- Takes care of CSS3 prefixes! -->
@@ -30,30 +29,56 @@
     <!-- makes all links open in a new window -->
     <base target="_blank">
 
-    <!-- First/Intro slide -->
-    <header class="intro slide">
+    <main>
+      <section class="slide welcome highlight">
+        <!--<h1><img class="logo-stacked" src="ge-theme/img/ge_monogram_primary_white_RGB.png" alt="GE">Bienvenue!</h1>-->
+        <h1>Bienvenues!</h1>
+
+        <div class="instructions">
+          <!-- ADD WIFI INFO HERE -->
+          <h2>Connectez <br> vous</h2>
+          <p><strong>Wifi:</strong> nom du wifi</p>
+          <p><strong>Password:</strong> mot de passe du wifi</p>
+          <hr>
+
+          <h2>Téléchargez<br> & Installez</h2>
+          <ol class="downloads">
+            <li>Fichiers pour le cours (zip file): <a href="https://github.com/ladieslearningcode/llc-html-css-multi-page-site/archive/master.zip">http://bit.ly/llc-multipage</a>
+              <ul>
+                <li>dézipper le fichier (<em>Tout extraire</em> si vous utilisez un PC)</li>
+                <li>ouvrir <strong>slides.html</strong> dans le navigateur pour voir la présentation</li>
+              </ul>
+            </li>
+            <li>VS CODE: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+            <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="intro slide">
         <img class="logo" src="ge-theme/img/ge_monogram_primary_white_RGB.png">
         <div class="info">
-            <h1>
-                <span class="title-bg">Les bases du CSS</span><br>
-                <!-- if needed -->
-                <span class="title-bg">Pour les débutantes</span>
-            </h1>
-            <h2><span>avec</span>Nom du professeur</h2>
+          <h1>
+            <span class="title-bg">Les bases du HTML et CSS</span><br>
+            <!-- if needed -->
+            <span class="title-bg">Pour les débutantes</span>
+          </h1>
+          <h2><span>avec</span>Nom du professeur</h2>
 
-            <img class="instructor-img" src="framework/img/profile-generic.jpg.png" alt="Instructor Name">
-            <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:">bonjour@mail.com</a></li>
-                <li><i class="fa fa-desktop"></i><a href="http://">site-web.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@moi</a></li>
-            </ul>
+          <img class="instructor-img" src="framework/img/profile-generic.jpg.png" alt="Instructor Name">
+          <ul>
+            <li><i class="fa fa-envelope"></i><a href="mailto:">bonjour@mail.com</a></li>
+            <li><i class="fa fa-desktop"></i><a href="http://">site-web.com</a></li>
+            <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@moi</a></li>
+          </ul>
         </div>
         <div class="presenter-notes">
-            <p>It's important to note at the beginning that a lot of material will be covered and their page will not be 100% complete by the end of the day. The goal of the day is to learn about the concepts but they will have most of the page done by the end of the day. "Homework" and additional resources are provided at the end to help them complete their project.</p>
-            <p>All code blocks in white are editable and CSS changes will be reflected in the slide.  For exercises, all instructions listed under <strong>bonus</strong> are for those who complete the exercises early to make sure learners at all different levels have something to work on.</p>
+          <p>It's important to note at the beginning that a lot of material will be covered and their page will not be 100% complete by the end of the day. The goal of the day is to learn about the concepts but they will have most of the page done by the end of the day. "Homework" and additional resources are provided at the end to help them complete their project.</p>
+          <p>All code blocks in white are editable and CSS changes will be reflected in the slide.  For exercises, all instructions listed under <strong>bonus</strong> are for those who complete the exercises early to make sure learners at all different levels have something to work on.</p>
         </div>
-    </header>
-    <main>
+      </section>
+
+
         <section class="slide centered llc" data-markdown>
           ![Projet final](framework/img/logo-llc.png)
 
