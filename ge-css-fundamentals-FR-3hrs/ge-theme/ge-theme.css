@@ -3,7 +3,7 @@ body {
 }
 
 a:hover {
-  color: #005EB8;
+  color: #711371;
 }
 
 .slide {
@@ -11,7 +11,7 @@ a:hover {
 }
 
 footer i {
-  color: #005EB8;
+  color: #711371;
 }
 
 footer img {
@@ -20,7 +20,7 @@ footer img {
 
 section h1,
 section h2 {
-  color: #005EB8;
+  color: #711371;
 }
 
 .intro .logo {
@@ -29,7 +29,7 @@ section h2 {
 
 .intro .title-bg,
 .last .title-bg {
-  background: rgba(0, 94, 184, 0.8);
+  background: rgba(113, 19, 113, 0.8);
 }
 
 .intro .info h2 span {
@@ -37,7 +37,7 @@ section h2 {
 }
 
 .last h3 span {
-  color: #005EB8;
+  color: #711371;
 }
 
 .slide.llc h2 {
