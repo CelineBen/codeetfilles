@@ -3,6 +3,7 @@
 Matériel pour les cours donnés par Du code et des filles.
 
 ### HTML et CSS
+- CSS pour débutantes (3hrs): [ici](https://celineben.github.io/codeetfilles/ge-css-fundamentals-FR-3hrs/cours.html)
 - Multi page site: [ici](https://celineben.github.io/codeetfilles/llc-html-css-multi-page-site-FR/cours.html)
 - Intro to CSS: [ici](https://celineben.github.io/codeetfilles/llc-css-fundamentals-FR/cours.html)
 - [One page site: [ici](https://celineben.github.io/codeetfilles/llc-html-css-one-page-FR/cours.html)] 
