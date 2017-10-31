@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Du Code et des Filles: Les bases du HTML et CSS pour débutantes</title>
@@ -21,15 +21,16 @@
 
     <!-- Takes care of CSS3 prefixes! -->
     <script src="framework/scripts/prefixfree.min.js"></script>
-</head>
+  </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
-<body data-duration="0">
+  <body data-duration="0">
     
     <!-- makes all links open in a new window -->
     <base target="_blank">
 
     <main>
+
       <section class="slide welcome highlight">
         <!--<h1><img class="logo-stacked" src="ge-theme/img/ge_monogram_primary_white_RGB.png" alt="GE">Bienvenue!</h1>-->
         <h1>Bienvenues!</h1>
@@ -78,173 +79,231 @@
         </div>
       </section>
 
+      <section class="slide centered llc" data-markdown>
+        ![Projet final](framework/img/logo-llc.png)
 
-        <section class="slide centered llc" data-markdown>
-          ![Projet final](framework/img/logo-llc.png)
+        Nous voudrions remercier Ladies Learning Code pour les cours en ligne que nous vous présentons aujourd'hui.
 
-          Nous voudrions remercier Ladies Learning Code pour les cours en ligne que nous vous présentons aujourd'hui.
+        ### Qu'est ce que Ladies Learning Code ?
 
-          ### Qu'est ce que Ladies Learning Code ?
+        LLC est un organisme sans but lucratif au Canada ayant le mandat d’être la ressource de premier plan pour les femmes et les jeunes qui désirent être à la fois des consommateurs et des bâtisseurs passionnés de la technologie en apprenant des compétences techniques de manière pratique, sociale et collaborative.
+      </section>
 
-          LLC est un organisme sans but lucratif au Canada ayant le mandat d’être la ressource de premier plan pour les femmes et les jeunes qui désirent être à la fois des consommateurs et des bâtisseurs passionnés de la technologie en apprenant des compétences techniques de manière pratique, sociale et collaborative.
-        </section>
+      <section class="slide centered" data-markdown>
+          ##Votre futur projet
 
-        <section class="slide centered" data-markdown>
-            ##Votre futur projet
+          Suivez [ce lien](project/final.html) pour voir le projet en entier!
 
-            Suivez [ce lien](project/final.html) Pour voir le projet en entier!
-            
-            ![Projet final](framework/img/workshop/final-project.jpg)  
-        </section>
+          ![Projet final](framework/img/workshop/final-project.jpg)
+      </section>
 
-        <section class="slide centered" data-markdown>
-            ##Voici un exemple de ce qui peut être
-            ##accompli grâce à un design en CSS !
+      <section class="slide centered" data-markdown>
+          ##Voici un exemple de ce qui peut être
+          ##accompli grâce à un design en CSS !
 
-            ![](framework/img/workshop/css-zen-garden.png)
+          ![](framework/img/workshop/css-zen-garden.png)
 
-            http://csszengarden.com/
-        </section>
+          http://csszengarden.com/
+      </section>
 
-        <section class="slide" data-markdown>
-            ##Préparons nos outils de développement
+        <!--<section class="slide" data-markdown>-->
+            <!--##Préparons nos outils de développement-->
 
-            **[VS Code](https://code.visualstudio.com/)** - Un éditeur de texte (code) simple et rempli d'outils forts utiles. Il faut aussi rajouter l'extension HTML Preview, une fois VS Code installé. Si vous êtes incapable de l'installer essayez avec [Notepad++](http://notepad-plus-plus.org/) (Windows) ou [Atom](https://atom.io/) (Mac).
-            
-            **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choisissez un navigateur moderne qui supporte les standards du web et qui possède d'excellents outils de développement. Pour faire de Chrome votre navigateur par défaut suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr). Pour une autre bonne option, essayez Firefox. Visitez [browsehappy.com](http://browsehappy.com) pour plus d'infos sur les navigateurs modernes.
+            <!--**[VS Code](https://code.visualstudio.com/)** - Un éditeur de texte (code) simple et rempli d'outils forts utiles. Il faut aussi rajouter l'extension HTML Preview, une fois VS Code installé. Si vous êtes incapable de l'installer essayez avec [Notepad++](http://notepad-plus-plus.org/) (Windows) ou [Atom](https://atom.io/) (Mac).-->
+            <!---->
+            <!--**[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choisissez un navigateur moderne qui supporte les standards du web et qui possède d'excellents outils de développement. Pour faire de Chrome votre navigateur par défaut suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr). Pour une autre bonne option, essayez Firefox. Visitez [browsehappy.com](http://browsehappy.com) pour plus d'infos sur les navigateurs modernes.-->
 
-            ** Outils de développement/*Developer tools* ** Nous permet d'*inspecter* n'importe quelle page web afin d'étudier sa charpente. Ces outils sont aussi très pratiques pour tester et déboguer votre code. On peut accéder à ces outils de 3 façons:
-            
-            * Clique droit, puis sélectionnez **Inspect Element**
-            * Sélectionnez l'icône Menu en haut à droite dans le navigateur Chrome et sélectionnez **Affichez > Options pour les développeurs > Outils de développements**
-            * Raccourci du clavier: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
-        </section>
-        <section class="slide" data-markdown>
-            ##Préparons-nous à travailler
+            <!--** Outils de développement/*Developer tools* ** Nous permet d'*inspecter* n'importe quelle page web afin d'étudier sa charpente. Ces outils sont aussi très pratiques pour tester et déboguer votre code. On peut accéder à ces outils de 3 façons:-->
+            <!---->
+            <!--* Clique droit, puis sélectionnez **Inspect Element**-->
+            <!--* Sélectionnez l'icône Menu en haut à droite dans le navigateur Chrome et sélectionnez **Affichez > Options pour les développeurs > Outils de développements**-->
+            <!--* Raccourci du clavier: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)-->
+        <!--</section>-->
 
-            Dans le dossier que vous avez téléchargé (**llc-css-fundamentals-master**) il y a plusieurs dossiers et fichiers dont les contenus diffèrent.
-            
-            ```
-            llc-css-fundamentals-master
-                |-- framework // Contient les fichiers nécessaires pour cette présentation. Ne pas modifier !
-                |-- project // Contient les fichiers nécessaires pour l'atelier d'aujourd'hui.
-                    |-- css // Contient seulement les fichiers CSS.
-                    |-- examples // Des exemples de fichiers HTML & CSS files pour chaque exercice.
-                    |-- images // Contient les images de votre site. Vous pouvez aussi en ajouter, ici.
-                    |-- final.html // Des exemples terminés, à titre de référence. Les fichiers CSS sont dans le dossier CSS.
-                    |-- index.html // Votre page HTML.
-                |-- index.html // C'est la présentation que vous consultez en ce moment (les diapos)!
-            ```
-        </section>
-        <section class="slide" data-markdown>
-            ##Préparons-nous à travailler
+      <section class="slide title dark" data-markdown>
+        <script type="text/template">
+          #Pour commencer
+          ##Le navigateur et le code source
+        </script>
+      </section>
 
-            Ouvrons nos fichiers de projet dans un navigateur et dans notre éditeur de code.
-            <!--TODO See if laptops will be FR / EN formatted ?-->
-            1. Ouvrez VS Code et cliquez sur **File > Open**  **Fichier > Ouvrir**.
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Les navigateurs
 
-                ![](framework/img/workshop/1-setup.png)
-            1. Sélectionnez le dossier **Project** (dans le dossier que vous avez téléchargé aujourd'hui). Sélectionner le dossier en entier et cliquez **Open**.
-                <!-- ![](framework/img/workshop/2-setup.png) -->
-            1. Le contenu du dossier apparaîtra dans la section de gauche de VS Code. Double cliquez sur **index.html** pour l'ouvrir.
-                <!-- ![](framework/img/workshop/3-setup.png) -->
-            1. Une fois dans le fichier **index.html** faites ctrl+MAJ+B. Cette action ouvrira le fichier HTML dans un nouvel onglet et vous permet de voir la page comme dans un navigateur.
+          La fonction principale d'un navigateur est de présenter la  **ressource web** de votre choix dans la fenêtre de navigation lorsque vous sollicitez un serveur web. La ressource web est généralement un document HTML, mais il peut s'agir d'un PDF, d'une image ou d'un autre type de document.
 
-                ![](framework/img/workshop/4-setup.png)
+          Avec [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (et avec d'autres navigateurs), vous pouvez observer la page source de *n'importe quelle* page web. Clique droit sur la page du navigateur et cliquez sur **Afficher le code source de la page**. Ce que vous voyez est de l'HTML!
 
-            Aucun CSS n'a été appliqué à cette étape, tout ce que vous verrez est du contenu HTML et son style par défaut comme dans [cet exemple](project/examples/1-no-css.html).
-        </section>
+          ---
+          ###Ressource
+          http://browsehappy.com
+        </script>
+      </section>
 
-        <section class="slide title" data-markdown>
-            #hypertext markup language
-            ##L'étape du contenu.
-        </section>
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Outils de développement
 
-        <section class="slide" data-markdown>
-            ##HTML: Petit rappel
-            
-            HTML sert à définir le **contenu** et les balises HTML servent à décrire les différents types de contenu.
+          Les **outils de développement de Chrome** permettent d'*inspecter* une page web, ce qui rend les choses plus faciles pour tester et debugger le code.
+          On peut accédez à ces outils de plusieurs façons:
 
-            **Title**: se trouve dans la section `&lt;head>` de votre document HTML. Il sert à définir le titre de votre page. Il parait dans l'onglet de votre navigateur, dans les résultats de moteurs de recherche et dans les favoris/*bookmarks*.
-            
-            ```xml
-            &lt;title&gt;Titre de ma page&lt;/title&gt;
-            ```
+          * Option 1: clique droit et séléctionner **Inspecter**
+          * Option 2: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+          * Options 3: Sélectionnez l'icône Menu en haut à droite dans le navigateur Chrome et sélectionnez **Plus d'outils > Outils de développements**
 
-            **Headings**: Il existe 6 niveaux de balise d'entête (*heading*) (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) et elles suivent un ordre hiérarchique. `&lt;h1&gt;` represente le titre le plus important de votre page, il vaut mieux l'utiliser qu'une fois. Les autres peuvent être réutilisés dans une même page. Il est important d'utiliser les bonnes balises avec le contenu approprié. Ces balises ont un rôle d'identification seulement, pas de style. 
+          ---
+          ###Ressources
+          * Pour que Chrome deviennent le navigateur par défault, suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr).
+          * En savoir plus sur les outils de développement: http://discover-devtools.codeschool.com
+        </script>
+      </section>
 
-            NB: Une balise, en anglais c'est un *tag*.
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##L'éditeur de texte
 
-            ```xml
-            &lt;h1&gt;Entête importante&lt;/h1&gt;
-            &lt;h2&gt;Entête moins importante que h1, mais importante quand même.&lt;/h2&gt;
-            ```
+          * Il est utilisé pour écrire et éditer du code
+          * Les éditeurs préinstallés (Notepad / TextEdit) n'incluent pas beaucoup d'options
+          * Il existe des options grauites ou payantes qui incluent de meilleurs options (couleurs du texte et plugins)
+          * Bonnes options: [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com/) (untimed free trial), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/).
 
-            **Paragraphs**: Créé avec les balises `&lt;p&gt;&lt;/p&gt;`.
-            ```xml
-            &lt;p&gt;Je suis un paragraphe.&lt;/p&gt;
-            ```
+          **[VS Code](https://code.visualstudio.com/)** est gratuit et est l'éditeur de texte que nous allons utiliser aujourd'hui.
 
-            **Lien**: requiers l'ajout d'un **attribut ** `href` pour préciser la direction du lien.
-            
-            ```
-            &lt;a href=&quot;http://siteweb.com&quot;&gt;lien&lt;/a&gt;
-            ```
+          ---
+          ###Un conseil!
+          Apprends à utiliser les [raccourcis clavier](http://ladieslearningcode.com/downloads/keyboard-shortcuts.pdf).
+        </script>
+      </section>
 
-            **Listes**: il existe 3 types de liste: ordonnées (`ol`) pour une liste numérotée et non ordonnée (`ul`) pour une liste avec des puces. Les items des listes doivent être définis comme des éléments de liste par des (`li`).
-            
-            ```xml
-            &lt;ul&gt;
-                &lt;li&gt;Élément de liste non-ordonée&lt;/li&gt;
-                &lt;li&gt;Élément de liste non-ordonée&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;ol&gt;
-                &lt;li&gt;Élément de liste ordonée&lt;/li&gt;
-                &lt;li&gt;Élément de liste ordonée&lt;/li&gt;
-            &lt;/ol&gt;
-            ```
-            Il existe aussi les liste de définitions (`dl`) où on peut définir des éléments (`dt`) et leurs définitions (`dd`).
+      <section class="slide" data-markdown>
+          ##Préparons-nous à travailler
 
-            ```xml
-            &lt;dl&gt;
-                &lt;dt&gt;Titre d'un element&lt;/dt&gt;
-                &lt;dd&gt;Définition de l'élément&lt;/dd&gt;
-            &lt;/dl&gt;
-            
-            ```
-            **Images**: comme les liens, cette balise requiert l'usage d'un attribut `src`, cette fois, pour définir la source de l'image ajoutée. On peut utiliser des .jpg, des .jpeg, .png et des .gif .
+          Dans le dossier que vous avez téléchargé (**llc-css-fundamentals-master**) il y a plusieurs dossiers et fichiers dont les contenus diffèrent.
 
-            ```
-            &lt;img src=&quot;chemin/vers/image.jpg&quot;&gt;
-            ```
-        </section>
-        <section class="slide">
-            <h2>Exercice #1: Personaliser le contenu (5-10 mins)</h2>
+          ```
+          llc-css-fundamentals-master
+              |-- framework // Contient les fichiers nécessaires pour cette présentation. Ne pas modifier !
+              |-- project // Contient les fichiers nécessaires pour l'atelier d'aujourd'hui.
+                  |-- css // Contient seulement les fichiers CSS.
+                  |-- examples // Des exemples de fichiers HTML & CSS files pour chaque exercice.
+                  |-- images // Contient les images de votre site. Vous pouvez aussi en ajouter, ici.
+                  |-- final.html // Des exemples terminés, à titre de référence. Les fichiers CSS sont dans le dossier CSS.
+                  |-- index.html // Votre page HTML.
+              |-- index.html // C'est la présentation que vous consultez en ce moment (les diapos)!
+          ```
+      </section>
 
-            <ol>
-                <li>Modifiez le titre de la page entre les balises <code>title</code>.</li>
-                <li>Modifiez votre nom et l'entête dans la section <code>header</code>.</li>
-                <li>Modifiez l'image de profil.</li>
-            </ol>
+      <section class="slide" data-markdown>
+          ##Préparons-nous à travailler
 
-            <p><strong>Bonus:</strong> Si vous avez le temps, essayer de personnaliser le contenu du reste de la page.</p>
+          Ouvrons nos fichiers de projet dans un navigateur et dans notre éditeur de code.
+          <!--TODO See if laptops will be FR / EN formatted ?-->
+          1. Ouvrez VS Code et cliquez sur **File > Open**  **Fichier > Ouvrir**.
 
-            <p>N'oubliez pas de sauvegarder vos changements (<strong>File &gt; Save</strong>)  et rafraichir votre page dans votre navigateur à chaque changement. Ne vous en faites pas si vous n'avez pas fini. Il y a déjà du contenu dans le modèle de base.</p>
+              ![](framework/img/workshop/1-setup.png)
+          1. Sélectionnez le dossier **Project** (dans le dossier que vous avez téléchargé aujourd'hui). Sélectionner le dossier en entier et cliquez **Open**.
+              <!-- ![](framework/img/workshop/2-setup.png) -->
+          1. Le contenu du dossier apparaîtra dans la section de gauche de VS Code. Double cliquez sur **index.html** pour l'ouvrir.
+              <!-- ![](framework/img/workshop/3-setup.png) -->
+          1. Une fois dans le fichier **index.html** faites ctrl+MAJ+B. Cette action ouvrira le fichier HTML dans un nouvel onglet et vous permet de voir la page comme dans un navigateur.
 
-            <p><strong>Truc de pro!</strong> Sauvez du temps grâce aux raccourcis du clavier :  </p>
+              ![](framework/img/workshop/4-setup.png)
 
-            <p><strong>CMD/CTRL + S</strong> pour sauvegarder.<br>
-            <strong>CMD/CTRL + R</strong> pour rafraichir votre navigateur.</p>
+          Aucun CSS n'a été appliqué à cette étape, tout ce que vous verrez est du contenu HTML et son style par défaut comme dans [cet exemple](project/examples/1-no-css.html).
+      </section>
 
-            <div class="presenter-notes">
-                Give the class 5 mins and then check if they completed #1-3. If not give them 5 more minutes.
-            </div>
-        </section>
+      <section class="slide title" data-markdown>
+          #hypertext markup language
+          ##L'étape du contenu
+      </section>
 
-        <section class="slide title" data-markdown>
-            #Cascading Style Sheets
-            ##L'étape du style !
-        </section>
+      <section class="slide" data-markdown>
+          ##HTML: Petit rappel
+
+          HTML sert à définir le **contenu** et les balises HTML servent à décrire les différents types de contenu.
+
+          **Title**: se trouve dans la section `&lt;head>` de votre document HTML. Il sert à définir le titre de votre page. Il parait dans l'onglet de votre navigateur, dans les résultats de moteurs de recherche et dans les favoris/*bookmarks*.
+
+          ```xml
+          &lt;title&gt;Titre de ma page&lt;/title&gt;
+          ```
+
+          **Headings**: Il existe 6 niveaux de balise d'entête (*heading*) (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) et elles suivent un ordre hiérarchique. `&lt;h1&gt;` represente le titre le plus important de votre page, il vaut mieux l'utiliser qu'une fois. Les autres peuvent être réutilisés dans une même page. Il est important d'utiliser les bonnes balises avec le contenu approprié. Ces balises ont un rôle d'identification seulement, pas de style.
+
+          NB: Une balise, en anglais c'est un *tag*.
+
+          ```xml
+          &lt;h1&gt;Entête importante&lt;/h1&gt;
+          &lt;h2&gt;Entête moins importante que h1, mais importante quand même.&lt;/h2&gt;
+          ```
+
+          **Paragraphs**: Créé avec les balises `&lt;p&gt;&lt;/p&gt;`.
+          ```xml
+          &lt;p&gt;Je suis un paragraphe.&lt;/p&gt;
+          ```
+
+          **Lien**: requiers l'ajout d'un **attribut ** `href` pour préciser la direction du lien.
+
+          ```
+          &lt;a href=&quot;http://siteweb.com&quot;&gt;lien&lt;/a&gt;
+          ```
+
+          **Listes**: il existe 3 types de liste: ordonnées (`ol`) pour une liste numérotée et non ordonnée (`ul`) pour une liste avec des puces. Les items des listes doivent être définis comme des éléments de liste par des (`li`).
+
+          ```xml
+          &lt;ul&gt;
+              &lt;li&gt;Élément de liste non-ordonée&lt;/li&gt;
+              &lt;li&gt;Élément de liste non-ordonée&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;ol&gt;
+              &lt;li&gt;Élément de liste ordonée&lt;/li&gt;
+              &lt;li&gt;Élément de liste ordonée&lt;/li&gt;
+          &lt;/ol&gt;
+          ```
+          Il existe aussi les liste de définitions (`dl`) où on peut définir des éléments (`dt`) et leurs définitions (`dd`).
+
+          ```xml
+          &lt;dl&gt;
+              &lt;dt&gt;Titre d'un element&lt;/dt&gt;
+              &lt;dd&gt;Définition de l'élément&lt;/dd&gt;
+          &lt;/dl&gt;
+
+          ```
+          **Images**: comme les liens, cette balise requiert l'usage d'un attribut `src`, cette fois, pour définir la source de l'image ajoutée. On peut utiliser des .jpg, des .jpeg, .png et des .gif .
+
+          ```
+          &lt;img src=&quot;chemin/vers/image.jpg&quot;&gt;
+          ```
+      </section>
+
+      <section class="slide">
+          <h2>Exercice #1: Personaliser le contenu (5-10 mins)</h2>
+
+          <ol>
+              <li>Modifiez le titre de la page entre les balises <code>title</code>.</li>
+              <li>Modifiez votre nom et l'entête dans la section <code>header</code>.</li>
+              <li>Modifiez l'image de profil.</li>
+          </ol>
+
+          <p><strong>Bonus:</strong> Si vous avez le temps, essayer de personnaliser le contenu du reste de la page.</p>
+
+          <p>N'oubliez pas de sauvegarder vos changements (<strong>File &gt; Save</strong>)  et rafraichir votre page dans votre navigateur à chaque changement. Ne vous en faites pas si vous n'avez pas fini. Il y a déjà du contenu dans le modèle de base.</p>
+
+          <p><strong>Truc de pro!</strong> Sauvez du temps grâce aux raccourcis du clavier :  </p>
+
+          <p><strong>CMD/CTRL + S</strong> pour sauvegarder.<br>
+          <strong>CMD/CTRL + R</strong> pour rafraichir votre navigateur.</p>
+
+          <div class="presenter-notes">
+              Give the class 5 mins and then check if they completed #1-3. If not give them 5 more minutes.
+          </div>
+      </section>
+
+      <section class="slide title" data-markdown>
+          #Cascading Style Sheets
+          ##L'étape du style !
+      </section>
 
         <section class="slide" data-markdown>
             ##CSS, en bref
