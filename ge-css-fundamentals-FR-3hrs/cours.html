@@ -106,20 +106,6 @@
           http://csszengarden.com/
       </section>
 
-        <!--<section class="slide" data-markdown>-->
-            <!--##Préparons nos outils de développement-->
-
-            <!--**[VS Code](https://code.visualstudio.com/)** - Un éditeur de texte (code) simple et rempli d'outils forts utiles. Il faut aussi rajouter l'extension HTML Preview, une fois VS Code installé. Si vous êtes incapable de l'installer essayez avec [Notepad++](http://notepad-plus-plus.org/) (Windows) ou [Atom](https://atom.io/) (Mac).-->
-            <!---->
-            <!--**[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choisissez un navigateur moderne qui supporte les standards du web et qui possède d'excellents outils de développement. Pour faire de Chrome votre navigateur par défaut suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr). Pour une autre bonne option, essayez Firefox. Visitez [browsehappy.com](http://browsehappy.com) pour plus d'infos sur les navigateurs modernes.-->
-
-            <!--** Outils de développement/*Developer tools* ** Nous permet d'*inspecter* n'importe quelle page web afin d'étudier sa charpente. Ces outils sont aussi très pratiques pour tester et déboguer votre code. On peut accéder à ces outils de 3 façons:-->
-            <!---->
-            <!--* Clique droit, puis sélectionnez **Inspect Element**-->
-            <!--* Sélectionnez l'icône Menu en haut à droite dans le navigateur Chrome et sélectionnez **Affichez > Options pour les développeurs > Outils de développements**-->
-            <!--* Raccourci du clavier: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)-->
-        <!--</section>-->
-
       <section class="slide title dark" data-markdown>
         <script type="text/template">
           #Pour commencer
@@ -213,68 +199,72 @@
           Aucun CSS n'a été appliqué à cette étape, tout ce que vous verrez est du contenu HTML et son style par défaut comme dans [cet exemple](project/examples/1-no-css.html).
       </section>
 
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Effectuer des changements
+
+          Voici comment effectuer des changements :
+
+          1. mettez à jour le code dans l'éditeur
+          2. enregistrez les changements (le fichier)
+          3. rafraîchissez le navigateur
+          4. recommencez
+
+          Essayez de remplacer « Your name here » par *votre* nom!
+          ```
+          <h1>Votre nom ici</h1>
+          ```
+          ---
+          ###Truc de pro! Utilisez des touches de raccourci.
+          * **ctrl/cmnd + s** pour sauvegarder
+          * **ctrl/cmnd + r** pour rafraîchir le navigateur
+
+          <div class="presenter-notes">
+            Dites eux apprenants qu'il y aura bientôt un exercice pour mettre à jour toute la page. Cette diapositive ne sert qu'à leur faire découvrir la procédure de mise à jour/sauvegarde/rafraîchissement et ralentir un peu le rythme du cours.
+          </div>
+        </script>
+      </section>
+
       <section class="slide title" data-markdown>
           #hypertext markup language
           ##L'étape du contenu
       </section>
 
       <section class="slide" data-markdown>
-          ##HTML: Petit rappel
+        <script type="text/template">
+          ##Syntaxe du HTML
 
-          HTML sert à définir le **contenu** et les balises HTML servent à décrire les différents types de contenu.
+          Les balises s'écrivent avec des chevrons `< >` et une barre oblique `/` pour la balise de fermeture.
+          Apprenez à connaître ces touches!
 
-          **Title**: se trouve dans la section `&lt;head>` de votre document HTML. Il sert à définir le titre de votre page. Il parait dans l'onglet de votre navigateur, dans les résultats de moteurs de recherche et dans les favoris/*bookmarks*.
-
-          ```xml
-          &lt;title&gt;Titre de ma page&lt;/title&gt;
-          ```
-
-          **Headings**: Il existe 6 niveaux de balise d'entête (*heading*) (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) et elles suivent un ordre hiérarchique. `&lt;h1&gt;` represente le titre le plus important de votre page, il vaut mieux l'utiliser qu'une fois. Les autres peuvent être réutilisés dans une même page. Il est important d'utiliser les bonnes balises avec le contenu approprié. Ces balises ont un rôle d'identification seulement, pas de style.
-
-          NB: Une balise, en anglais c'est un *tag*.
+          Les balises viennent habituellement en paire: une balise d'ouverture et une balise de fermeture pour habiller (*wrap*) le contenu. Veuillez noter que la balise de fermeture prend une barre oblique vers l'avant (`/`).
 
           ```xml
-          &lt;h1&gt;Entête importante&lt;/h1&gt;
-          &lt;h2&gt;Entête moins importante que h1, mais importante quand même.&lt;/h2&gt;
+          <tag> <-- balise d'ouverture --- balise de fermeture --> </tag>
           ```
 
-          **Paragraphs**: Créé avec les balises `&lt;p&gt;&lt;/p&gt;`.
-          ```xml
-          &lt;p&gt;Je suis un paragraphe.&lt;/p&gt;
+          Les *balises* HTML décrivent le contenu pour le navigateur Web.
           ```
-
-          **Lien**: requiers l'ajout d'un **attribut ** `href` pour préciser la direction du lien.
-
+          <h1>Cette balise est un en-tête</h1>
+          <p>Cette balise est pour les paragraphes.</p>
           ```
-          &lt;a href=&quot;http://siteweb.com&quot;&gt;lien&lt;/a&gt;
-          ```
+        </script>
+      </section>
 
-          **Listes**: il existe 3 types de liste: ordonnées (`ol`) pour une liste numérotée et non ordonnée (`ul`) pour une liste avec des puces. Les items des listes doivent être définis comme des éléments de liste par des (`li`).
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Écrire du HTML
 
-          ```xml
-          &lt;ul&gt;
-              &lt;li&gt;Élément de liste non-ordonée&lt;/li&gt;
-              &lt;li&gt;Élément de liste non-ordonée&lt;/li&gt;
-          &lt;/ul&gt;
-          &lt;ol&gt;
-              &lt;li&gt;Élément de liste ordonée&lt;/li&gt;
-              &lt;li&gt;Élément de liste ordonée&lt;/li&gt;
-          &lt;/ol&gt;
-          ```
-          Il existe aussi les liste de définitions (`dl`) où on peut définir des éléments (`dt`) et leurs définitions (`dd`).
+          Pour vous assurer que vos balises sont bien fermées et pour minimiser les erreurs, écrivez les chevrons d'ouverture et de fermeture *en premier*.
 
-          ```xml
-          &lt;dl&gt;
-              &lt;dt&gt;Titre d'un element&lt;/dt&gt;
-              &lt;dd&gt;Définition de l'élément&lt;/dd&gt;
-          &lt;/dl&gt;
+          Puis, placez le curseur entre les balises pour ajouter le texte.
 
-          ```
-          **Images**: comme les liens, cette balise requiert l'usage d'un attribut `src`, cette fois, pour définir la source de l'image ajoutée. On peut utiliser des .jpg, des .jpeg, .png et des .gif .
+          ![balises d'ouverture et de fermeture](framework/img/workshop/writing-html.gif)
 
-          ```
-          &lt;img src=&quot;chemin/vers/image.jpg&quot;&gt;
-          ```
+          ---
+          ###Truc de pro!
+          Dans plusieurs éditeurs de texte, vous n'avez qu'à taper le **nom** de la balise et à appuyer sur « tab » pour créer la balise. Essayez ça en tapant `p` et en appuyant sur « tab »!
+        </script>
       </section>
 
       <section class="slide">
