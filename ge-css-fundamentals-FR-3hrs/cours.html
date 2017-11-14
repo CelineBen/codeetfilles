@@ -51,7 +51,7 @@
               </ul>
             </li>
             <li>VS CODE: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
-            <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
+            <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.fr/chrome</a></li>
           </ol>
         </div>
       </section>
@@ -64,7 +64,7 @@
             <!-- if needed -->
             <span class="title-bg">Pour les débutantes</span>
           </h1>
-          <h2><span>avec</span>Nom du professeur</h2>
+          <h2><span>avec</span>Yasmine Rattel et Labiba Vinson</h2>
 
           <img class="instructor-img" src="framework/img/profile-generic.jpg.png" alt="Instructor Name">
           <ul>
@@ -84,7 +84,7 @@
 
         Nous voudrions remercier Ladies Learning Code pour les cours en ligne que nous vous présentons aujourd'hui.
 
-        ### Qu'est ce que Ladies Learning Code ?
+        ### Qu'est ce que "Ladies Learning Code" ?
 
         LLC est un organisme sans but lucratif au Canada ayant le mandat d’être la ressource de premier plan pour les femmes et les jeunes qui désirent être à la fois des consommateurs et des bâtisseurs passionnés de la technologie en apprenant des compétences techniques de manière pratique, sociale et collaborative.
       </section>
@@ -103,7 +103,7 @@
 
           ![](framework/img/workshop/css-zen-garden.png)
 
-          http://csszengarden.com/
+          http://www.csszengarden.com/tr/francais/
       </section>
 
       <section class="slide title dark" data-markdown>
@@ -119,7 +119,7 @@
 
           La fonction principale d'un navigateur est de présenter la  **ressource web** de votre choix dans la fenêtre de navigation lorsque vous sollicitez un serveur web. La ressource web est généralement un document HTML, mais il peut s'agir d'un PDF, d'une image ou d'un autre type de document.
 
-          Avec [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (et avec d'autres navigateurs), vous pouvez observer la page source de *n'importe quelle* page web. Clique droit sur la page du navigateur et cliquez sur **Afficher le code source de la page**. Ce que vous voyez est de l'HTML!
+          Avec [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) (et avec d'autres navigateurs), vous pouvez observer la page source de *n'importe quelle* page web. Clique droit sur la page du navigateur et cliquez sur **Afficher le code source de la page**. Ce que vous voyez est de l'HTML!
 
           ---
           ###Ressource
@@ -135,13 +135,13 @@
           On peut accédez à ces outils de plusieurs façons:
 
           * Option 1: clique droit et séléctionner **Inspecter**
-          * Option 2: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+          * Option 2: **Ctrl + Shift + I** (PC)
           * Options 3: Sélectionnez l'icône Menu en haut à droite dans le navigateur Chrome et sélectionnez **Plus d'outils > Outils de développements**
 
           ---
           ###Ressources
-          * Pour que Chrome deviennent le navigateur par défault, suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr).
-          * En savoir plus sur les outils de développement: http://discover-devtools.codeschool.com
+          * Pour que Chrome devienne le navigateur par défault, suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=fr).
+          * En savoir plus sur les outils de développement: http://discover-devtools.codeschool.com (en anglais)
         </script>
       </section>
 
@@ -156,9 +156,6 @@
 
           **[VS Code](https://code.visualstudio.com/)** est gratuit et est l'éditeur de texte que nous allons utiliser aujourd'hui.
 
-          ---
-          ###Un conseil!
-          Apprends à utiliser les [raccourcis clavier](http://ladieslearningcode.com/downloads/keyboard-shortcuts.pdf).
         </script>
       </section>
 
@@ -168,7 +165,7 @@
           Dans le dossier que vous avez téléchargé (**llc-css-fundamentals-master**) il y a plusieurs dossiers et fichiers dont les contenus diffèrent.
 
           ```
-          llc-css-fundamentals-master
+          llc-css-fundamentals-FR-3hrs
               |-- framework // Contient les fichiers nécessaires pour cette présentation. Ne pas modifier !
               |-- project // Contient les fichiers nécessaires pour l'atelier d'aujourd'hui.
                   |-- css // Contient seulement les fichiers CSS.
@@ -176,7 +173,8 @@
                   |-- images // Contient les images de votre site. Vous pouvez aussi en ajouter, ici.
                   |-- final.html // Des exemples terminés, à titre de référence. Les fichiers CSS sont dans le dossier CSS.
                   |-- index.html // Votre page HTML.
-              |-- index.html // C'est la présentation que vous consultez en ce moment (les diapos)!
+                  |-- resume.pdf // l'export pdf de la page que vous allez produire.
+              |-- cours.html // C'est la présentation que vous consultez en ce moment (les diapos)!
           ```
       </section>
 
@@ -185,14 +183,14 @@
 
           Ouvrons nos fichiers de projet dans un navigateur et dans notre éditeur de code.
           <!--TODO See if laptops will be FR / EN formatted ?-->
-          1. Ouvrez VS Code et cliquez sur **File > Open**  **Fichier > Ouvrir**.
+          1. Ouvrez VS Code et cliquez sur **Fichier > Ouvrir**  **Fichier > Ouvrir**.
 
               ![](framework/img/workshop/1-setup.png)
-          1. Sélectionnez le dossier **Project** (dans le dossier que vous avez téléchargé aujourd'hui). Sélectionner le dossier en entier et cliquez **Open**.
+          1. Sélectionnez le dossier **Project** (dans le dossier que vous avez téléchargé aujourd'hui). Sélectionner le dossier en entier et cliquez **Ouvrir**.
               <!-- ![](framework/img/workshop/2-setup.png) -->
           1. Le contenu du dossier apparaîtra dans la section de gauche de VS Code. Double cliquez sur **index.html** pour l'ouvrir.
               <!-- ![](framework/img/workshop/3-setup.png) -->
-          1. Une fois dans le fichier **index.html** faites ctrl+MAJ+B. Cette action ouvrira le fichier HTML dans un nouvel onglet et vous permet de voir la page comme dans un navigateur.
+          1. Une fois dans le fichier **index.html** faites ctrl+MAJ+H. Cette action ouvrira le fichier HTML dans un nouvel onglet et vous permet de voir la page comme dans un navigateur.
 
               ![](framework/img/workshop/4-setup.png)
 
@@ -210,14 +208,14 @@
           3. rafraîchissez le navigateur
           4. recommencez
 
-          Essayez de remplacer « Your name here » par *votre* nom!
+          Essayez de remplacer « Votre nom ici » par *votre* nom!
           ```
           <h1>Votre nom ici</h1>
           ```
           ---
-          ###Truc de pro! Utilisez des touches de raccourci.
-          * **ctrl/cmnd + s** pour sauvegarder
-          * **ctrl/cmnd + r** pour rafraîchir le navigateur
+          ###Astuce : Utilisez des touches de raccourci.
+          * **ctrl + s** pour sauvegarder
+          * **ctrl + r** pour rafraîchir le navigateur
 
           <div class="presenter-notes">
             Dites eux apprenants qu'il y aura bientôt un exercice pour mettre à jour toute la page. Cette diapositive ne sert qu'à leur faire découvrir la procédure de mise à jour/sauvegarde/rafraîchissement et ralentir un peu le rythme du cours.
@@ -237,7 +235,7 @@
           Les balises s'écrivent avec des chevrons `< >` et une barre oblique `/` pour la balise de fermeture.
           Apprenez à connaître ces touches!
 
-          Les balises viennent habituellement en paire: une balise d'ouverture et une balise de fermeture pour habiller (*wrap*) le contenu. Veuillez noter que la balise de fermeture prend une barre oblique vers l'avant (`/`).
+          Les balises viennent habituellement en paire: une balise d'ouverture et une balise de fermeture pour habiller (*wrap*) le contenu. Notez que la balise de fermeture prend une barre oblique vers l'avant (`/`).
 
           ```xml
           <tag> <-- balise d'ouverture --- balise de fermeture --> </tag>
@@ -262,7 +260,7 @@
           ![balises d'ouverture et de fermeture](framework/img/workshop/writing-html.gif)
 
           ---
-          ###Truc de pro!
+          ###Astuce :
           Dans plusieurs éditeurs de texte, vous n'avez qu'à taper le **nom** de la balise et à appuyer sur « tab » pour créer la balise. Essayez ça en tapant `p` et en appuyant sur « tab »!
         </script>
       </section>
@@ -273,18 +271,18 @@
           <p>Ouvrez le fichier <strong>index.html</strong> et</p>
           <ol>
               <li>Modifiez le titre de la page entre les balises <code>title</code>.</li>
-              <li>Modifiez votre nom et l'entête dans la section <code>header</code>.</li>
+              <li>Modifier la partie <code>header</code> en mettant votre nom et une petite description.</li>
               <li>Modifiez l'image de profil.</li>
           </ol>
 
           <p><strong>Bonus:</strong> Si vous avez le temps, essayer de personnaliser le contenu du reste de la page.</p>
 
-          <p>N'oubliez pas de sauvegarder vos changements (<strong>File &gt; Save</strong>)  et rafraichir votre page dans votre navigateur à chaque changement. Ne vous en faites pas si vous n'avez pas fini. Il y a déjà du contenu dans le modèle de base.</p>
+          <p>N'oubliez pas de sauvegarder vos changements (<strong>File &gt; Save</strong>)  et rafraîchir votre page dans votre navigateur à chaque changement. Ne vous en faites pas si vous n'avez pas fini. Il y a déjà du contenu dans le modèle de base.</p>
 
-          <p><strong>Truc de pro!</strong> Sauvez du temps grâce aux raccourcis du clavier :  </p>
+          <p><strong>Astuce :</strong> Sauvez du temps grâce aux raccourcis du clavier :  </p>
 
-          <p><strong>CMD/CTRL + S</strong> pour sauvegarder.<br>
-          <strong>CMD/CTRL + R</strong> pour rafraichir votre navigateur.</p>
+          <p><strong>CTRL + S</strong> pour sauvegarder.<br>
+          <strong>CTRL + R</strong> pour rafraichir votre navigateur.</p>
 
           <div class="presenter-notes">
               Give the class 5 mins and then check if they completed #1-3. If not give them 5 more minutes.
@@ -411,7 +409,7 @@
 
             Lorsqu'on choisi un nom de `class` ou d' `id`, on utilise un nom descriptif et sans espace. Des tirets (*hyphens*) (-), des barres de soulignements (*underscores*) (_) et les CamelCase sont de mise. 
 
-            Le CSS est aussi sensible à la casse, donc bien que nos 3 exemples soient semblables le CSS les lira différemment. Il est important (pour votre santé mentale) de choisir une convention et de s'y tenir. 
+            Le CSS est aussi sensible à la casse, donc bien que nos 3 exemples soient semblables le CSS les lira différemment. Il est plus simple de choisir une convention et de s'y tenir.
             
             ```
             class="content-wrapper"
@@ -442,11 +440,11 @@
 
             **Références pour les couleurs:**
 
-            [http://www.colorpicker.com/](http://www.colorpicker.com/)  
-            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
-            [http://www.colourlovers.com/](http://www.colourlovers.com/)  
-            [http://flatuicolors.com/](http://flatuicolors.com/)  
-            [http://color.hailpixel.com/](http://color.hailpixel.com/)  
+            [https://www.w3schools.com/colors/colors_picker.asp](https://www.w3schools.com/colors/colors_picker.asp)
+            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)
+            [http://www.colourlovers.com/](http://www.colourlovers.com/)
+            [http://flatuicolors.com/](http://flatuicolors.com/)
+            [http://color.hailpixel.com/](http://color.hailpixel.com/)
             [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
         </section>
 
@@ -569,7 +567,7 @@
             ```
         </section>
         <section class="slide" data-markdown>
-            ##Héritage et spécificité
+            ##Héritage et spécificité  --TO BE REMOVED--
             
             Une des grandes forces du CSS est qu'un élément enfant peut hériter du style de son élément parent. 
 
@@ -1209,7 +1207,7 @@ max-width: 1000px;</textarea>
                 /* cible seulement les balises a imbriquées dans n'importe quel élément auquel nous avons attribué la classe classname */
             }
             ```
-            **Truc de pro:** Comme dans le film Inception, n'allez jamais à plus de trois niveaux de profondeur!
+            **Astuce:** Comme dans le film Inception, n'allez jamais à plus de trois niveaux de profondeur!
 
             ```
             nav ul li a span {
@@ -1688,15 +1686,13 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
 
             <h2 class="title">
                 <span class="title-bg">Les bases du CSS</span><br>
-                <span class="title-bg">pour débutants</span>
+                <span class="title-bg">pour débutantes</span>
             </h2>
-            <h3><span>avec</span> [Nom du professeur]</h3>
+            <h3><span>avec</span> Yasmine Rattel et Labiba Vinson</h3>
 
             <img class="instructor-img" src="framework/img/profile-generic.jpg.png" alt="Profile picture">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:">bonjour@mail.com</a></li>
-                <li><i class="fa fa-desktop"></i><a href="http://">site-web.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@moi</a></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:">yasmine.rattel@ge.com</a></li>
             </ul>
 
             <p class="attribution">Slidedecks créés avec <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> et <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
