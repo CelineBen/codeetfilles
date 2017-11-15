@@ -44,7 +44,7 @@
 
           <h2>Téléchargez<br> & Installez</h2>
           <ol class="downloads">
-            <li>Fichiers pour le cours (zip file): <a href="https://github.com/CelineBen/codeetfilles/tree/master/ge-css-fundamentals-FR-3hrs/archive/master.zip">http://bit.ly/llc-multipage</a>
+            <li>Fichiers pour le cours (zip file): <a href="https://github.com/CelineBen/codeetfilles/raw/master/ge-css-fundamentals-FR-3hrs/master.zip">http://bit.ly/2zCFoYB</a>
               <ul>
                 <li>dézipper le fichier (<em>Tout extraire</em> si vous utilisez un PC)</li>
                 <li>ouvrir <strong>slides.html</strong> dans le navigateur pour voir la présentation</li>
@@ -64,7 +64,7 @@
             <!-- if needed -->
             <span class="title-bg">Pour les débutantes</span>
           </h1>
-          <h2><span>avec</span>Yasmine Rattel et Labiba Vinson</h2>
+          <h2><span>avec</span>Yasmine et Labiba</h2>
 
           <img class="instructor-img" src="framework/img/profile-generic.jpg.png" alt="Instructor Name">
           <ul>
@@ -162,11 +162,12 @@
       <section class="slide" data-markdown>
           ##Préparons-nous à travailler
 
-          Dans le dossier que vous avez téléchargé (**llc-css-fundamentals-master**) il y a plusieurs dossiers et fichiers dont les contenus diffèrent.
+          Dans le dossier que vous avez téléchargé (**master.zip**) il y a plusieurs dossiers et fichiers dont les contenus diffèrent.
 
           ```
-          llc-css-fundamentals-FR-3hrs
+          master
               |-- framework // Contient les fichiers nécessaires pour cette présentation. Ne pas modifier !
+              |-- ge-theme // Contient les fichiers css qui permettent de mettre les "couleurs" de GE.
               |-- project // Contient les fichiers nécessaires pour l'atelier d'aujourd'hui.
                   |-- css // Contient seulement les fichiers CSS.
                   |-- examples // Des exemples de fichiers HTML & CSS files pour chaque exercice.
@@ -272,7 +273,6 @@
           <ol>
               <li>Modifiez le titre de la page entre les balises <code>title</code>.</li>
               <li>Modifier la partie <code>header</code> en mettant votre nom et une petite description.</li>
-              <li>Modifiez l'image de profil.</li>
           </ol>
 
           <p><strong>Bonus:</strong> Si vous avez le temps, essayer de personnaliser le contenu du reste de la page.</p>
@@ -461,34 +461,7 @@
         <section class="slide" data-markdown>
             ##Inclure le CSS
 
-            Il existe 3 différentes façons d'inclure (aussi appelé *referencing*) du CSS dans une page HTML
-
-            ###Sur une ligne/ (*Inline*)
-            On peut ajouter du CSS directement sur n'importe quel élément HTML grâce à l'**attribut** `style`. 
-
-            ```
-            &lt;p style=&quot;color: blue;&quot;&gt;J'écris du CSS!&lt;/p&gt;
-            ```
-            Cette technique devrait être évitée, mais il est bon de savoir qu'elle existe au cas où en verriez quelque part.
-
-            ###Interne/ (*Internal*)
-            Utilisez les balises `&lt;style&gt;` à l'intérieur de l'élément `&lt;head&gt;`.
-
-            ```    
-            &lt;head&gt;
-                &lt;title&gt;Titre de ma page&lt;/title&gt;
-                &lt;meta charset=&quot;utf-8&quot;&gt;
-                &lt;style&gt;
-                    h1 {
-                     font-size: 16px;
-                    }
-                &lt;/style&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;p&gt;J'écris toujours du CSS !&lt;/p&gt;
-            &lt;/body&gt;
-            ```
-            Favorisez cette technique plutôt que la méthode *inline*, elle est plus efficace puisque si vous avez plusieurs pages à votre site, vous auriez à copier le style de chacun des éléments au fur et à mesure que vous voudriez les réutiliser. Vous auriez à dupliquer du code pour une mauvaise raison.
+            Il existe différentes façons d'inclure (aussi appelé *referencing*) du CSS dans une page HTML
 
             ###Externe/ (*External*)
             Créez un lien vers une feuille de style. Cette méthode est la plus recommandée, car elle permet de réellement séparer votre CSS (style) de votre HTML (contenu). Le lien vers votre feuille de style est inclue (*referenced*) dans le `&lt;head&gt;` de chacune de vos pages où votre style est requis. Ainsi, vous n'aurez besoin que de mettre à jour votre fichier CSS en fonction des nouveaux éléments que vous aurez besoin de styliser.
@@ -506,6 +479,8 @@
                 &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
             &lt;/head&gt;
             ```
+            ###Sur une ligne/ (*Inline*) et  Interne/ (*Internal*)
+            Ces deux autres méthodes ne sont pas abordées dans le cours.
 
             **Indice de pro!**  Raccourci VS Code : tapez "link" + touche 'tab'. Ta da!
         </section>
@@ -533,7 +508,7 @@
         </section>
 
         <section class="slide">
-            <h2>Styles par défaut: Reset vs Normalize</h2>
+            <h2>Styles par défaut: Reset vs Normalize </h2>
             <p>Vous remarquerez que les couleurs ne s'étendent pas jusqu'aux bords des pages. C'est parce que les navigateurs ont leur propre style de base (*User agent stylesheet*) qui s'ajoute au style que vous créez. Voici un exemple du style de base que Chrome utilise (on peut le voir en utilisant les outils de développeur): </p>
             <img src="framework/img/workshop/chrome-user-agent.png">
 
@@ -675,7 +650,7 @@ h3 {
         </section> 
 
         <section class="slide" data-markdown>
-            ##Refactor! (Réusinage du code)
+            ##Refactor! (Réusinage du code) -- TO BE REMOVED --
     
             Qu'est-ce que le *refactoring* (réusinage du code, en bon français)? C'est le procédé de restructurer du code existant pour le rendre plus efficace. Lorsque le code est proprement écrit et organisé il roule non seulement plus vite, il diminue les changes de bogues à travers les navigateurs et il rend aussi la maintenance plus facile. C'est facile de le remettre à plus tard, mais il vaut mieux le faire au fur et à mesure.
 
@@ -690,7 +665,7 @@ h3 {
         <section class="slide" data-markdown>
             ##Exercice en classe: Typographie (suite)
 
-            L'exemple précédent peut être réusiné de différentes façons:
+            L'exemple précédent peut être réécrit de différentes façons:
             
             ```
             h1, h2, h3 {
