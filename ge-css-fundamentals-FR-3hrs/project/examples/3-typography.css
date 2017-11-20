@@ -1,7 +1,8 @@
 /* GLOBAL STYLES
 -----------------*/
 body {
-  font-family: "Merriweather", serif;
+ /* font-family: "Merriweather", serif;*/
+  font-family: 'Spectral SC', serif;
   line-height: 1.5;
 }
 

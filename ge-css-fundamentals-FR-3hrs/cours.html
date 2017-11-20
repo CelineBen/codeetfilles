@@ -466,7 +466,7 @@
             ###Externe/ (*External*)
             Créez un lien vers une feuille de style. Cette méthode est la plus recommandée, car elle permet de réellement séparer votre CSS (style) de votre HTML (contenu). Le lien vers votre feuille de style est inclue (*referenced*) dans le `&lt;head&gt;` de chacune de vos pages où votre style est requis. Ainsi, vous n'aurez besoin que de mettre à jour votre fichier CSS en fonction des nouveaux éléments que vous aurez besoin de styliser.
 
-            Pour inclure votre CSS dans l'élément `&lt;head&gt;`, vous devrez créer une balise `&lt;lien&gt;` avec 2 **attribus** `rel` et `href`. Tout comme lorsqu'on crée un lien normal, le `href` pointe le chemin où est situé le fichier.
+            Pour inclure votre CSS dans l'élément `&lt;head&gt;`, vous devrez créer une balise `&lt;lien&gt;` avec 2 **attributs** `rel` et `href`. Tout comme lorsqu'on crée un lien normal, le `href` pointe le chemin où est situé le fichier.
             
             Même si ce n'est pas obligatoire, les fichiers CSS sont souvent sauvegardés dans un dossier nommé CSS dans un souci d'organisation. Si vous organisez vos dossiers, assurez-vous que vos liens sont créés en conséquence.
 
@@ -686,20 +686,19 @@ h3 {
         </section>
 
         <section class="slide" data-markdown>
-            ##Les Polices We (*Web fonts*)
+            ##Les Polices Web (*Web fonts*)
 
-            Pour avoir plus d'options que les *web fonts* traditionnelles, il existe des services comme [Google Fonts](http://www.google.com/fonts/) et [Font Squirrel](http://www.fontsquirrel.com/) pour faciliter l'accès à une grande variété de polices qui peuvent être utilisées sans avoir à se soucier de leur installation.
+            Pour avoir plus d'options que les *web fonts* traditionnelles, il existe des services comme [Google Fonts](http://www.google.com/fonts/) pour faciliter l'accès à une grande variété de polices qui peuvent être utilisées sans avoir à se soucier de leur installation.
 
-            Un service comme **Font Squirrel** vous demandera de télécharger la police et d'ajouter ces fichiers à votre projet. Le site fournis un [générateur](http://www.fontsquirrel.com/tools/webfont-generator) pour créer différent fichier de police en fonction du support requis par chacun des navigateurs, il inclut aussi un fichier de démo et des instructions d'utilisation. Pratique !
-        
+
             **Google Fonts** vous permet de créer un lien direct avec leur feuille de style, sans fichier à télécharger. Pour utiliser ces polices:
              
-            * Sélectionnez la police que vous voulez utiliser et cliquez sur **Add to Collection**
-            * Vous pouvez les consulter pour mieux les étudier, puis quand vous êtes certaines cliquez *Use* !
+            * Sélectionnez la police que vous voulez utiliser et cliquez sur **Select this font**
+            * Vous pouvez les consulter pour mieux les étudier.
             * Sélectionnez les graisses (*font weights*). Le plus vous en choisissez, plus votre page prendra du temps à charger.
-            * Les caractères par défaut devraient contenir ce dont vous aurez besoin. Ne choisissez un option que si vous devez supporter un autre langage.
+            * Les caractères par défaut devraient contenir ce dont vous aurez besoin. Ne choisissez une option que si vous devez afficher une autre langue.
             * Prennez le `&lt;lien&gt;` et ajoutez-le au `&lt;head&gt;` de votre page.
-            * Utilisez votre nouvelle police en utilisant la propriété `font-family` comme présentée dans l'exemple sur la *Google Fonts page*.
+            * Utilisez votre nouvelle police en utilisant la propriété `font-family` comme présentée dans l'exemple sur la *Google Fonts page* dans le  css de votre page.
 
             C'est tout !
         </section>
@@ -712,10 +711,10 @@ h3 {
                 <li>Choisissez les polices &amp; typographies qui vous plaisent ! </li>
             </ol>
             
-            <p><a href="http://www.htmldog.com/guides/css/beginner/text/">Référence sur les propriétés des éléments de texte en CSS</a><br>
-            <a href="http://csstypeset.com/">http://csstypeset.com</a> - Générateur de CSS</p>
+            <p><a href="http://www.htmldog.com/guides/css/beginner/text/">Référence </a>sur les propriétés des éléments de texte en CSS, en Anglais<br>
+            Un exemple de générateur de CSS :<a href="http://csstypeset.com/">http://csstypeset.com</a></p>
 
-            <p>Besoi d'aide pour choisir une police ? Le projet en exemple utilise (sans-serif), Merriweather (serif), Pacifico (cursive).</p>
+            <p>Besoin d'aide pour choisir une police ? Le projet, par exemple, utilise (sans-serif), Merriweather (serif), Pacifico (cursive).</p>
 
             <p>Votre page devrait ressembler à ceci: <a href="project/examples/3-typography.html">Exemple 3</a>.</p>
 
@@ -741,13 +740,15 @@ h3 {
             * `padding` - ajouter/enlever de l'espace *à l'intérieur* de l'élément
             * `border` - ajoute une bordure *en dehors* de l'élément
             * `width` - peut être défini à une certaine taille 
-            * `height` - peut être défini à une certaine taille 
+            * `height` - peut être défini à une certaine taille
+
+                        ![box model](framework/img/workshop/box-model.gif)
         </section>
 
         <section class="slide">
             <h2>*Padding* et *Margin* (rembourrage et marges)</h2>
 
-            <p>Le <code>padding</code> et les <code>margin</code> peuvent êtres déclarées en utilisant 1 ou 4 nombres. Les valeurs peuvent en utilisant différentes unités de mesure, mais les pixels et les pourcentages sont les plus communs. Définir la valeur à 0 va <strong>enlever</strong> tout espace mis par défault sur l'élément HTML. Toute valeur positive va <strong>ajouter</strong> de l'espace.</p>
+            <p>Le <code>padding</code> et les <code>margin</code> peuvent êtres déclarées en utilisant 1 ou 4 nombres. Les valeurs peuvent être déclarées en utilisant différentes unités de mesure, mais les pixels et les pourcentages sont les plus communs. Définir la valeur à 0 va <strong>enlever</strong> tout espace mis par défault sur l'élément HTML. Toute valeur positive va <strong>ajouter</strong> de l'espace.</p>
 
             <ul>
                 <li>4 valeurs signifient haut, droit, bas, gauche</li>
@@ -821,16 +822,15 @@ margin: 0 0 0 0;</textarea>
 
         </section>
             
-        <section class="slide centered" data-markdown>
+        <!--<section class="slide centered" data-markdown>
             ##Ishhhh.... :S
             ![](framework/img/workshop/cant-even.gif)
-        </section>
+        </section>-->
 
         <section class="slide" data-markdown>
             ##La solution au troubles du *Box Model*!
             
-            Heureusement, il y a une solution.     
-            Luckily, there’s a fix for this. Utilisez [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) !  
+            Heureusement, il y a une solution. Utilisez [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) !
 
             Nous vous recommandons d'ajouter cette déclaration à tous vos projets !
 
@@ -846,7 +846,7 @@ margin: 0 0 0 0;</textarea>
             ![box model diagram](framework/img/workshop/box-model-fix.gif)
         </section>
 
-        <section class="slide">
+        <!--<section class="slide">
             <h2>Un peu plus sur les *margins*</h2>
 
             <p><code>margin</code> accepte aussi les valeurs négatives, mais pas le *padding*. Lorsque vous utilisez des valeurs négatives, l'élément sorT de son alignement naturel et peut avoir un impact sur les éléments qui l'entoure.</p>
@@ -858,7 +858,7 @@ margin: 0px; /* change to negative value */</textarea>
             <div id="neg-margin">box</div>
 
             <p>Référence sur les marges négatives: <a href="http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/">*The Definitive Guide to Using Negative Margins*</a></p>
-        </section> 
+        </section> -->
 
         <section class="slide">
             <h2>Aligner au centre grâce aux marges</h2>
@@ -875,7 +875,7 @@ margin: 0 auto;</textarea>
         <section class="slide">
             <h2>Exercice en classe</h2>
             <ol>
-                <li>Ajoutez la solution au *box model* à notre fichier CSS. <a href="index-fr.html#slide37">Rappel*</a></li>
+                <li>Ajoutez la solution au *box model* à notre fichier CSS. <a href="cours.html#slide37">Rappel*</a></li>
                 <li>Retournez à votre projet et ajoutez <code>padding:1px</code> à la section <code>header</code> pour observer son comportement. Ouvrez l'inspecteur (outils de développement) dans Chrome et inspectez l'élément.</li>
                 <li>Le conteneur est trop large ! Utilisons <code>margin: 0 auto;</code> pour le centrer. Essayez ensuite d'ajouter du style à la section <code>.profile</code>, dans votre fichier CSS.</li>
             </ol>
@@ -1555,7 +1555,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
         </section>
 
         <section class="slide" data-markdown>
-        ##Icon fonts
+        ##Icon fonts -- TO BE REMOVED--
 
         Les polices d'icônes sont une manière facile d'ajouter des images à votre site tout en ayant la flexibilité d'utiliser des propriétés de style CSS pour changer leur grandeur et leur couleur, par exemple. Après tout, ce *sont* des polices d'écriture.
 

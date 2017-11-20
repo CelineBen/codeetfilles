@@ -136,6 +136,9 @@ footer .license img {
 }
 .slide img {
   max-width: 100%;
+  display: block;
+  margin: auto;
+
 }
 .slide:target {
   overflow: auto;
