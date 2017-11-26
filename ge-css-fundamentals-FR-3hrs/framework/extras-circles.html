@@ -31,7 +31,7 @@
         <section class="slide" data-markdown>
             ##Making Circles
 
-            For the second option for the Skills section, let’s turn this lists into circles and center align them.
+            For the second option for the hobbies section, let’s turn this lists into circles and center align them.
             
 
             For this exercise, use `display: inline-block` instead of `float: left` to get them to line up side-by-side.  This will allow the elements to be center aligned from the inherited style of text-align: center.
@@ -39,7 +39,7 @@
             Use a selector that will target *only* the list items contained within the circle option. Since the individual list items itself are to be lined up side-by-side,  target them specifically.
             
             ```css
-            .skills-circles ul li {}
+            .hobbies-circles ul li {}
             ```
 
             [Read more about display, inline and block](extras-inline-block.html).
@@ -50,7 +50,7 @@
             <p>Give them an equal width &amp; height to create a perfect circle using which CSS property?</p>
             <p class="delayed">border-radius!</p>
             <p class="delayed">Try adding a border too.</p>
-<pre class="delayed"><code>.skills-circles ul li {
+<pre class="delayed"><code>.hobbies-circles ul li {
     display: inline-block;
     height: 150px;
     width: 150px;
@@ -94,7 +94,7 @@
 &lt;/ul&gt;
 ```
             ```
-            .skills-circles ul li {
+            .hobbies-circles ul li {
                 display: inline-block;
                 height: 150px;
                 width: 150px;
@@ -108,7 +108,7 @@
             We need to make the span take on the characteristics if a block element in order for this fix to work.
 
             ```css
-            .skills-circles span {
+            .hobbies-circles span {
                 display: inline-block;
             }
             ```
@@ -120,7 +120,7 @@
             Now, set the `line-height` to normal to override the `line-height` set in the `li`.  Then finally, `vertical-align: middle` can be added to vertically align the lines of text to each other (which probably seems like it should have work in the first place but doesn't... ugh.)
             
             ```
-            .skills-circles span {
+            .hobbies-circles span {
                 display: inline-block;
                 line-height: normal;
                 vertical-align: middle;

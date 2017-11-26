@@ -494,15 +494,15 @@
                 ```
                 header { }  
                 .profile { }  
-                .work-experience { }  
-                .skills { }  
+                .matieres { }
+                .hobbies { }
                 .education { }  
                 .contact { }
                 ```
 
             **Bonus**: Ajoutez des commentaires pour organiser votre CSS et créer des groupes au style pertinent.
 
-            Votre page devrait ressembler à quelque chose comme ça (project/examples/2-bg-colours.html) et votre CSS devrait ressembler à ceci(project/examples/2-bg-colours.css). 
+            Votre page devrait ressembler à quelque chose comme [ça](project/examples/2-bg-colours.html) et votre CSS devrait ressembler à [ceci](project/examples/2-bg-colours.css).
 
             Tous les fichiers d'exemples sont situés dans **project > examples**.
         </section>
@@ -1458,26 +1458,26 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
 
 1. Utilisons l'exemple précédent, ajoutez un effet de gradient à la section **Compétences** pour rendre le texte plus facile à lire sur l'image d'arrière-plan.
 
-2. Dans la section **Compétences**, il y a deux options, l'option `.skills-list` et l'option `.skills-circle`. Mettez de côté l'option *circle* pour l'instant, ajoutez des floats à la classe `.column` pour obtenir **trois** listes alignées côte à côte. Nous aurons besoin de régler `width`, `float` et d'utiliser la classe `clearfix`.
+2. Dans la section **Compétences**, il y a deux options, l'option `.hobbies-list` et l'option `.hobbies-circle`. Mettez de côté l'option *circle* pour l'instant, ajoutez des floats à la classe `.column` pour obtenir **trois** listes alignées côte à côte. Nous aurons besoin de régler `width`, `float` et d'utiliser la classe `clearfix`.
 
-Voici à quoi devrait ressemble votre page: [exemple 10](project/examples/10-skills-section.html).
+Voici à quoi devrait ressemble votre page: [exemple 10](project/examples/10-hobbies-section.html).
 
 Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
 
 ```
-.skills {
+.hobbies {
   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
 }
 ```
 ```
-.skills .columns {
+.hobbies .columns {
   width: 33.33%;
   float: left;
 }
 ```
 ```xml
-&lt;div class=&quot;skills-list clearfix&quot;&gt;
+&lt;div class=&quot;hobbies-list clearfix&quot;&gt;
     &lt;h3&gt;List Option&lt;/h3&gt;
     &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
         &lt;h4&gt;Best at:&lt;/h4&gt;
@@ -1577,7 +1577,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
         Étant donné que nous voulons enlever les puces de toutes les éléments de liste de cette section, nous pouvons toutes les cibler en même temps en utilisant un **sélecteur enfant**. Nous pouvons utiliser `.skill`, étant donné que c'est la classe pour la section au complet et `ul` pour cibler toutes les listes.
 
 ```css
-.skills ul {
+.hobbies ul {
     list-style-type: none;
     padding: 0;
 }

@@ -68,30 +68,30 @@ header {
 }
 
 
-/* WORK EXPERIENCE
+/* MATIERES
 -------------------*/
-.work-experience {
+.matieres {
   background: #2980b9;
 }
-.work-experience .details {
+.matieres .details {
   width: 30%;
   float: left;
 }
-.work-experience .description {
+.matieres .description {
   width: 70%;
   float: right;
 }
-.work-experience .item {
+.matieres .item {
   border-bottom: 1px solid #ccc;
 }
-.work-experience .item:last-child {
+.matieres .item:last-child {
   border-bottom: none;
 }
 
 
-/* SKILLS
+/* hobbies
 ----------*/
-.skills {
+.hobbies {
   background: #27ae60;
 }
 

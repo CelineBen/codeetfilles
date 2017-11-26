@@ -64,10 +64,10 @@ header {
 
 /* SHARED SECTION STYLES
 -------------------------*/
-.profile, .skills, .contact {
+.profile, .hobbies, .contact {
   color: #ffffff;
 }
-.work-experience, .education {
+.matieres, .education {
   background: #FEFEFC;
 }
 
@@ -108,48 +108,48 @@ header {
 
 
 
-/* WORK EXPERIENCE
+/* MATIERES
 -------------------*/
-.work-experience .details {
+.matieres .details {
   width: 30%;
   float: left;
 }
-.work-experience .description {
+.matieres .description {
   width: 70%;
   float: right;
 }
-.work-experience .item {
+.matieres .item {
   border-bottom: 1px solid #ccc;
 }
-.work-experience .item:last-child {
+.matieres .item:last-child {
   border-bottom: none;
 }
 
 
-/* SKILLS
+/* hobbies
 ----------*/
-.skills {
+.hobbies {
   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
   url(../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
-.skills .columns {
+.hobbies .columns {
   width: 33.33%;
   float: left;
 }
-.skills ul {
+.hobbies ul {
   list-style-type: none;
   padding: 0;
 }
-.skills-list i,
-.skills-list h4 {
+.hobbies-list i,
+.hobbies-list h4 {
   color: #2980b9;
 }
-.skills-circles ul {
+.hobbies-circles ul {
   
 }
-.skills-circles ul li {
+.hobbies-circles ul li {
   display: inline-block;
   height: 150px;
   width: 150px;
@@ -157,7 +157,7 @@ header {
   border: 2px solid #2980b9;
   border-radius: 50%;
 }
-.skills-circles span {
+.hobbies-circles span {
   display: inline-block;
   line-height: normal;
   vertical-align: middle;
