@@ -46,11 +46,13 @@ h2 {
 /* HEADER
 ----------*/
 header {
-  background: url(../images/background-2.jpg) no-repeat fixed 50%;
+  background: url(../images/background-7.jpg) no-repeat fixed 50%;
   background-size: cover;
   text-align: center;
   padding: 150px 0;
+  color: #f7f3f7;
 }
+
 
 /* ABOUT ME / PROFILE
 ----------------------*/

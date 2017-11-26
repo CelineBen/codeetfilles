@@ -17,7 +17,7 @@ force clear the floats of the child elements */
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
-  background: url(../images/background-5.jpg) no-repeat fixed;
+  background: url(../images/background-7.jpg) no-repeat fixed;
   background-position: 50%;
   background-size: cover;
 }
@@ -49,7 +49,7 @@ section h2 {
 }
 
 a {
-  color: #16a085;
+  color: #9766a0;
   transition: all 0.5s ease;
 }
 a:hover {
@@ -70,10 +70,11 @@ a:hover {
 header {
   text-align: center;
   padding: 150px 0;
+  color: #f7f3f7;
 }
 
-.download {
-  background: #16a085;
+/*.download {
+  background: #9766a0;
   position: fixed;
   color: white;
   top: 0;
@@ -81,7 +82,7 @@ header {
   display: block;
   padding: 18px;
   text-decoration: none;
-}
+}*/
 
 /* COMMON SECTION STYLES 
 -------------------------*/
@@ -102,7 +103,7 @@ header {
   background: rgba(0, 0, 0, 0.8);
 }
 .profile h2 {
-  background: #16a085;
+  background: #9766a0;
   display: inline-block;
   padding: 10px 20px;
   transform: rotate(-4deg);
@@ -110,9 +111,9 @@ header {
   border: none;
   transition: all 0.5s ease;
 }
-.profile h2:hover {
+/*.profile h2:hover {
   transform: rotate(4deg);
-}
+}*/
 .profile .summary {
   float: left;
   width: 70%;
@@ -172,7 +173,7 @@ header {
   font-family: "Pacifico", cursive;
   font-size: 20px;
   letter-spacing: 0.08em;
-  color: #16a085;
+  color: #9766a0;
 }
 
 /* hobbies
@@ -188,10 +189,10 @@ header {
 }
 .hobbies h4 {
   margin-bottom: 10px;
-  color: #16a085;
+  color: #9766a0;
 }
 .hobbies i {
-  color: #16a085;
+  color: #9766a0;
 }
 
 .hobbies-list .columns {
@@ -211,7 +212,7 @@ header {
   line-height: 150px;
   display: inline-block;
   padding: 0 10px;
-  border: 2px solid #16a085;
+  border: 2px solid #9766a0;
   border-radius: 50%;
   background: black;
 }
@@ -224,7 +225,7 @@ header {
 /* EDUCATION
 -------------*/
 .education h4 {
-  color: #16a085;
+  color: #9766a0;
 }
 
 /* CONTACT & FOOTER 

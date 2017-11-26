@@ -8,8 +8,9 @@
 
 body {
   font-family: "Merriweather", serif;
+  /*color: #f7f3f7;*/
   line-height: 1.5;
-  background: url(../images/background-2.jpg) no-repeat fixed 50%;
+  background: url(../images/background-7.jpg) no-repeat fixed 10%;
   background-size: cover;
 }
 

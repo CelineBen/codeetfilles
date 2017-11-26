@@ -174,7 +174,6 @@
                   |-- images // Contient les images de votre site. Vous pouvez aussi en ajouter, ici.
                   |-- final.html // Des exemples terminés, à titre de référence. Les fichiers CSS sont dans le dossier CSS.
                   |-- index.html // Votre page HTML.
-                  |-- resume.pdf // l'export pdf de la page que vous allez produire.
               |-- cours.html // C'est la présentation que vous consultez en ce moment (les diapos)!
           ```
       </section>
@@ -921,11 +920,19 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
         </section>
 
          <section class="slide" data-markdown>
-            ##Exercice #4: Les contenants! (15mins)
+            ##Exercice #4: Les contenants! (5 MINS)
 
-            Ajoutez la classe `.content-wrap` à chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
+            La classe `.content-wrap` est présente dans chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
 
-            Tout d'abord, pour faciliter l'ajout de notre classe, revenons sur comment minimiser des blocs de code ainsi que sur comment changer la tabulation de plusieurs lignes en même temps dans VS Code.
+             Puis appliquez les styles à `.content-wrap`. Ajoutez un peu de padding.
+
+             ```
+             .content-wrap {
+             width: 1000px;
+             margin: 0 auto;
+             padding: 60px 0;
+             }
+             ```
 
             Votre page devrait ressembler à quelque chose comme ça: [exemple 4](project/examples/4a-content-wrap.html).
 
@@ -965,7 +972,7 @@ max-width: 1000px;</textarea>
             Nous avons créé un style réutilisable qui nous aidera à garder notre CSS propre. Nous pourrons donc appliquer cette classe à chaque endroit où ce style sera nécessaire.
         </section>
 
-        <section class="slide" data-markdown>
+       <!-- <section class="slide" data-markdown>
             ## Les dangers des "div-it aiguë"
 
             N'attrapez pas la "div-it aiguë". Utilisez les `&lt;div&gt;` pour *grouper* des élements qui seront stylisés ensemble en une seule section. Si vous devez styliser un seul élément, comme un `&lt;h1&gt;`, vous n'avez qu'à ajouter directement votre style à cet élément. Votre navigateur voit chaque élément comme un "boîte" donc il n'est pas nécessaire de mettre une boîte autour d'une boîte!
@@ -983,7 +990,7 @@ max-width: 1000px;</textarea>
             ```xml
             &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
             ```
-        </section>
+        </section> -->
         <section class="slide centered" data-markdown>
             ##Éviter le gonflement de code
 
@@ -1050,7 +1057,7 @@ max-width: 1000px;</textarea>
             ```
             Étant donné que votre fichier CSS est à l'*intérieur* d'un dossier, utilisez `../` pour *sortir* du dossier pour accéder au fichier d'images.
 
-            Maintenant, ajoutons une image d'arrière-plan au `body` de notre page. Vous pouvez choisir une image parmi celles situées dans le dossier **projet > images** ou ajouter une image de votre choix.
+            Maintenant, ajoutons une image d'arrière-plan au `body` de notre page. Vous pouvez choisir une image parmi celles situées dans le dossier **projet > images**.
 
             ```
             background: url(../images/background-1.jpg);
@@ -1132,12 +1139,12 @@ max-width: 1000px;</textarea>
             Changeons le `background-size` à `cover`. Votre code devrait ressembler à ceci:
 
             ```
-            background: url(../images/background-2.jpg) no-repeat fixed 50%;
+            background: url(../images/background-7.jpg) no-repeat fixed 50%;
             background-size: cover;
             ```
             Et votre page devrait ressembler à l'[exemple 6](project/examples/6-background.html).
 
-            **Ressource additionnelle**: https://developer.mozilla.org/en/docs/Web/CSS/background
+           <!-- **Ressource additionnelle**: https://developer.mozilla.org/en/docs/Web/CSS/background -->
         </section>
 
         <section class="slide" data-markdown>
@@ -1225,9 +1232,9 @@ max-width: 1000px;</textarea>
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercice #7: Ajouter plus de floats et de bordure (20mins)
+            ##Exercice #7: Ajouter plus de floats et de bordure (10mins)
 
-            Ajoutez des `floats` à la section **Expérience de travail**. Voici un lien vers le [projet final](project/final.html) que vous pouvez utiliser comme référence et pour obtenir quelques indices pour vous aider à démarrer:
+            Ajoutez des `floats` à la section **Matières**. Voici un lien vers le [projet final](project/final.html) que vous pouvez utiliser comme référence et pour obtenir quelques indices pour vous aider à démarrer:
 
             Dans le HTML, l'élément `.details` contient l'info qui doit être présenté à gauche et l'élément `.description` contient le contenu qui doit être affiché à droite. Les `floats` peuvent être utilisés pour accomplir ceci. N'oubliez pas, il est important d'attribuer une largeur aux éléments que nous mettons en `float`.
 
@@ -1236,23 +1243,23 @@ max-width: 1000px;</textarea>
             ```xml
             &lt;div class=&quot;item&quot;&gt;
                 &lt;div class=&quot;details&quot;&gt;
-                    Nom de la compagnie, date, etc
+                    Nom de la matière
                 &lt;/div&gt;
                 &lt;div class=&quot;description&quot;&gt;
-                    Description de l'emploi
+                    Description de la matière
                 &lt;/div&gt;
             &lt;/div&gt;&lt;!-- close .item --&gt;
             ```
             **Bonus:** Si vous avez du temps, suivez ces instructions pour ajouter une bordure ou changez quelques styles de polices d'écriture!
 
-            * Chaque item d'Expérience de travail est contenu dans un élément qui possède la classe `.item`. Créer un nouveau bloc de déclaration pour `.item` et ajoutez-lui la propriété `border-bottom`. La syntaxe est la suivante: `border-bottom: grosseur style couleur;`
+            * Chaque item des  **Matières** est contenue dans un élément qui possède la classe `.item`. Créer un nouveau bloc de déclaration pour `.item` et ajoutez-lui la propriété `border-bottom`. La syntaxe est la suivante: `border-bottom: grosseur style couleur;`
 
             ```
             .item {
                 border-bottom: 1px solid #ccc;
             }
             ```
-            **Bonus extra:** Pour s'assurer que tous les items **Expérience de travail** ont une bordure *sauf* le dernier item, utilisez un **[sélecteur de pseudo-classe](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:last-child)**, `:last-child`. Notez bien la syntaxe suivante:
+            **Bonus extra:** Pour s'assurer que tous les items **Matières** ont une bordure *sauf* le dernier item, utilisez un **[sélecteur de pseudo-classe](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:last-child)**, `:last-child`. Notez bien la syntaxe suivante:
 
             ```
             .item:last-child {
@@ -1271,7 +1278,7 @@ max-width: 1000px;</textarea>
 
             Pour la section **Profil**, ajoutez une opacité à la couleur d'arrière-plan. Étant donné que le HTML pour cette section est imbriqué dans la balise `body`, en ajoutant une opacité à la section Profil nous pourrons voir l'image d'arrière-plan du `body` derrière elle.
 
-            Utilisez la propriété `background` mais avec une valeur en `RGBa`. Le `a` représente la transparence alpha. (Il y a aussi une propriété `opacity` mais celle-ci changerait aussi l'opacité du texte donc nous allons plutôt utiliser `background`.)
+            Utilisez la propriété `background` mais avec une valeur en `RGBa`. Le `a` représente la transparence. (Il y a aussi une propriété `opacity` mais celle-ci changerait aussi l'opacité du texte donc nous allons plutôt utiliser `background`.)
 
             ```
             .profile {
@@ -1523,7 +1530,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
             </div>
         </section>
 
-        <section class="slide" data-markdown>
+      <!--  <section class="slide" data-markdown>
             ##Exercice pratique: Télécharger CV en format PDF
 
             Certaines personnes pourraient être intéressées à avoir une copie papier de votre CV, donc ajoutons une option pour télécharger une copie. Retournez à votre document HTML et ajoutez un lien vers une copie de votre CV. Dans votre dossier projet, il y a un **resume.pdf** qui peut être utilisé comme exemple ou vous pouvez mettre le vôtre s'il est à portée de main.
@@ -1552,7 +1559,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
             <div class="presenter-notes">
                 <p>Les diapositives pour davantage de style sur le lien de téléchargement a été bougé à la section extras/devoirs car elles ne couvrent aucun nouveau concept. Ça nous donne donc du temps pour introduire les polices d'icônes.<p>
             </div>
-        </section>
+        </section>-->
 
         <!-- <section class="slide" data-markdown>
         ##Icon fonts -- TO BE REMOVED--
