@@ -266,7 +266,7 @@
       </section>
 
       <section class="slide">
-          <h2>Exercice #1: Personaliser le contenu (5-10 mins)</h2>
+          <h2>##Exercice #1: Personaliser le contenu (5-10 mins)</h2>
 
           <p>Ouvrez le fichier <strong>index.html</strong> et</p>
           <ol>
@@ -437,14 +437,9 @@
 
             ```
 
-            **Références pour les couleurs:**
+            **Référence pour les couleurs:**
 
             [https://www.w3schools.com/colors/colors_picker.asp](https://www.w3schools.com/colors/colors_picker.asp)
-            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)
-            [http://www.colourlovers.com/](http://www.colourlovers.com/)
-            [http://flatuicolors.com/](http://flatuicolors.com/)
-            [http://color.hailpixel.com/](http://color.hailpixel.com/)
-            [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
         </section>
 
         <section class="slide">
@@ -568,7 +563,7 @@
             #Typographie
         </section>
 
-        <section class="slide" data-markdown>
+ <!--       <section class="slide" data-markdown>
             ##Une police sûre/ (*Web safe fonts*)
             
             Les polices de caractères par défaut peuvent être changées grâce à la propriété `font-family`. Cependant, toutes les polices ne sont pas installées sur tous les ordinateurs. Il est donc recommandé d'utiliser des polices qui sont considérées comme sûre (*Web safe*) qui sont plus universellement accessibles par tous les ordinateurs.
@@ -580,7 +575,7 @@
             ```
             Voici une référence pratique en matière de *Web safe fonts*: [CSS Font Stack](http://cssfontstack.com/).
         </section>
-
+-->
         <section class="slide">
             <h2>Styles de polices & Typographie</h2>
             <p>Expérimentons avec quelques propriétés CSS pour styliser du texte. Essayez de changer quelques-unes des valeurs ci-dessous</p>
@@ -599,7 +594,7 @@ color: #222222;</textarea>
             <a href="http://csstypeset.com/">http://csstypeset.com</a>- CSS generator</p>
 
             <div class="presenter-notes">
-                <p>Explain what each property does while updating each example in the code editor.</p>
+                <p>Explain what each property does while updating each example in the code editor. Don't go deep in the web safe fonts</p>
             </div>
         </section>
 
@@ -703,7 +698,7 @@ h3 {
         </section>
 
         <section class="slide">
-            <h2>Exercice #3: Typographie (10mins)</h2>
+            <h2>##Exercice #3: Typographie (10mins)</h2>
 
             <ol>
                 <li>Trouvez et ajouter 2-3 *font-families* sur <a href="http://www.google.com/fonts/">Google Fonts</a></li>
@@ -920,7 +915,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
         </section>
 
          <section class="slide" data-markdown>
-            ##Exercice #4: Les contenants! (5 MINS)
+             ##Exercice #4: Les contenants! (5 MINS)
 
             La classe `.content-wrap` est présente dans chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
 
@@ -998,9 +993,8 @@ max-width: 1000px;</textarea>
         </section>
 
         <section class="slide" data-markdown>
-            ##Modifier le style de header & heading
-
-            Dans le cas de la section `header`, nous pouvons appliquer `text-align: center` plutôt qu'ajouter la div `.content-wrap`. Étant donné que le contenu est court, nous n'avons pas à nous inquiéter de le contenir, nous évitons donc la "div-it aiguë". Aussi, ajustez le `padding` pour ajouter plus d'espace dans notre en-tête. Le code final pour l'en-tête devrait ressembler à ceci:
+            ##Exercice #5: Modifier le style de header & heading
+            Dans le cas de la section `header`, nous pouvons appliquer `text-align: center` plutôt qu'ajouter la div `.content-wrap`. Étant donné que le contenu est court, nous n'avons pas à nous inquiéter de le contenir, nous évitons donc de rajouter un div. Aussi, ajustez le `padding` pour ajouter plus d'espace dans notre en-tête. Le code final pour l'en-tête devrait ressembler à ceci:
 
             ```
             header {
@@ -1130,7 +1124,7 @@ max-width: 1000px;</textarea>
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercice pratique: Background-size
+            ##Exercice #6: Background-size
 
             Tout semble parfait... jusqu'à ce que vous diminuez la taille de l'écran. C'est à ce moment qu'utiliser le mot-clé `cover` fonctionnera mieux.
 
@@ -1288,7 +1282,7 @@ max-width: 1000px;</textarea>
         </section>
 
         <section class="slide">
-            <h2>Exercice #8: Arrière-plans, couleurs et bordures (20mins)</h2>
+            <h2>##Exercice #8: Arrière-plans, couleurs et bordures (20mins)</h2>
 
             <ol>
                 <li>Modifiez les sections <strong>Expérience de travail</strong> et<strong>Éducation</strong> avec la même couleur d'arrière-plan. L'exemple de projet utilise un gris très pâle (#fefefc).</li>
@@ -1407,7 +1401,7 @@ p:hover {
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercice pratique: hover & transition
+            ##Exercice #9: hover & transition -- TO BE REMOVED --
 
             Ajoutez la propriété transition à l'effet hover et essayez de mettre votre curseur sur vos liens.
 
@@ -1461,13 +1455,13 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
         </section>
 
         <section class="slide" data-markdown>
-##Exercise #10: Gradient & plus de floats (15 mins)
+        ##Exercice #10: Gradient & plus de floats (15 mins)
 
 1. Utilisons l'exemple précédent, ajoutez un effet de gradient à la section **Compétences** pour rendre le texte plus facile à lire sur l'image d'arrière-plan.
 
 2. Dans la section **Compétences**, il y a deux options, l'option `.hobbies-list` et l'option `.hobbies-circle`. Mettez de côté l'option *circle* pour l'instant, ajoutez des floats à la classe `.column` pour obtenir **trois** listes alignées côte à côte. Nous aurons besoin de régler `width`, `float` et d'utiliser la classe `clearfix`.
 
-Voici à quoi devrait ressemble votre page: [exemple 10](project/examples/10-hobbies-section.html).
+Voici à quoi devrait ressemble votre page: [exemple 10](project/examples/10-skills-section.html).
 
 Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
 
