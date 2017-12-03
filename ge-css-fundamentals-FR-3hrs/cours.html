@@ -928,7 +928,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
 
         <section class="slide">
             <h2>width &amp; max-width, px vs %</h2>
-            <p>Le contenu est maintenant beau et centré, mais que ce passe-t-il lorsque la fenêtre du navigateur est plus petite que la largeur établie? Regardons la différence entre les propriétés <code>max-width</code> et <code>width</code> ainsi que l'utilisation de pourcentages et de pixels.</p>
+            <p>Le contenu est maintenant beau et centré, mais que se passe-t-il lorsque la fenêtre du navigateur est plus petite que la largeur établie? Regardons la différence entre les propriétés <code>max-width</code> et <code>width</code> ainsi que l'utilisation de pourcentages et de pixels.</p>
 
             <p>Réduisez la taille de la fenêtre et voyez comment la boîte répond. Remplacez ensuite la largeur par un pourcentage inférieur à 100 % et essayez à nouveau.</p>
 
@@ -1039,17 +1039,17 @@ max-width: 1000px;</textarea>
             Jusqu'à maintenant, nous avons utilisé `background` pour les couleurs, mais la même propriété peut être utilisée pour avoir une image d'arrière-plan.
 
             ```
-            background-image: url(path/to/file.jpg); /* longhand */
-            background: url(path/to/file.jpg);/* shorthand */
+            background-image: url(path/to/file.jpg); /* version longue */
+            background: url(path/to/file.jpg); /* version courte */
             ```
-            Étant donné que votre fichier CSS est à l'*intérieur* d'un dossier, utilisez `../` pour *sortir* du dossier pour accéder au fichier d'images.
+            Étant donné que votre fichier CSS est à l'*intérieur* d'un dossier, utilisez `../` pour *sortir* du dossier et accéder au fichier d'images. (`..` représente le dossier parent du dossier courant.)
 
             Maintenant, ajoutons une image d'arrière-plan au `body` de notre page. Vous pouvez choisir une image parmi celles situées dans le dossier **projet > images**.
 
             ```
             background: url(../images/background-1.jpg);
             ```
-            Voyez-vous comment l'image se répète? Arrangeons cela tout de suite.
+            Voyez-vous comment l'image se répète ? Arrangeons cela tout de suite.
         </section>
         <section class="slide" data-markdown>
             ##Exercice pratique: Les images d'arrière-plan (suite)
@@ -1057,15 +1057,15 @@ max-width: 1000px;</textarea>
             Pour empêcher l'image de se répéter, utilisez `background-repeat` ou utilisez la version courte en ajoutant votre valeur à la propriété `background`.
 
             ```
-            /* version courte */
-            background: url(../images/background-1.jpg) no-repeat;
-
             /* version longue */
             background-image: url(../images/background-1.jpg);
             background-repeat: no-repeat;
+
+            /* version courte */
+            background: url(../images/background-1.jpg) no-repeat;
             ```
 
-            Maintenant, l'image ne prend pas toute la page mais, avant de modifier ceci, essayons d'ajouter un autre style. Ajoutez "fixed" à la version courte de la propriété `background`. Allez voir votre page et faites-la défiler. Que ce passe-t-il avec l'image?
+            Maintenant, l'image ne prend pas toute la page mais, avant de modifier ceci, essayons d'ajouter un autre style. Ajoutez "fixed" à la version courte de la propriété `background`. Allez voir votre page et faites-la défiler. Que se passe-t-il avec l'image ?
 
             ```
             /* version courte */
@@ -1081,14 +1081,15 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ##Taille de l'arrière-plan
 
-            CSS3 a introduit la propriété `background-size` qui nous permet non seulement de changer la taille de l'image mais aussi de rendre l'image d'arrière-plan fluide et flexible. La syntaxe est:
+            CSS3 a introduit la propriété `background-size` qui nous permet non seulement de changer la taille de l'image mais aussi de rendre l'image d'arrière-plan fluide et flexible. La syntaxe est :
 
             ```
             background-size: width height;
             ```
-            La valeur par défaut pour la `width` et le `height` est `auto` et garde les dimensions originales de l'image. Si seulement une valeur est définie, la valeur sera considérée comme étant celle de la `width`. Le `height` sera réglé à `auto` et l'image maintiendra ces proportions initiales.
+            La valeur par défaut pour la `width` (largeur) et le `height` (hauteur) est `auto` et garde les dimensions originales de l'image.
+            Si seulement une valeur est définie, la valeur sera considérée comme étant celle de la `width`. Le `height` sera réglé à `auto` et l'image maintiendra ces proportions initiales.
 
-            Il y a plusieurs façons de définir les dimensions en utilisant px, pourcentages, mots-clés, etc.
+            Il y a plusieurs façons de définir les dimensions en utilisant des unités différentes : px, pourcentages, mots-clés, etc.
 
             `background-size` est la version longue de la propriété. Pour l'inclure dans la version courte `background`, il *doit* être inclus après `background-position`, séparé par le caractère `/`.
 
@@ -1119,11 +1120,11 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             <h2>##Exercice #6: Background-size</h2>
 
-            Tout semble parfait... jusqu'à ce que vous diminuez la taille de l'écran. C'est à ce moment qu'utiliser le mot-clé `cover` fonctionnera mieux.
+            Tout semble parfait... jusqu'à ce que vous diminuiez la taille de l'écran. C'est à ce moment qu'utiliser le mot-clé `cover` fonctionnera mieux.
 
-            `cover` ajuste l'image pour qu'elle remplisse le contenant en entier mais, si elle a des proportions différentes que celles de l'écran, l'image sera rognée.
+            `cover` ajuste l'image pour qu'elle remplisse le contenant en entier mais, si elle a des proportions différentes de celles de l'écran, l'image sera rognée.
 
-            Changeons le `background-size` à `cover`. Votre code devrait ressembler à ceci:
+            Changeons le `background-size` à `cover`. Votre code devrait ressembler à ceci :
 
             ```
             background: url(../images/background-7.jpg) no-repeat fixed 50%;
@@ -1141,81 +1142,54 @@ max-width: 1000px;</textarea>
 
             Les floats CSS peuvent flotter à gauche ou à droite.
 
-            **Cependant**, nous brisons le *flux d'empilement normal* en mettant un élément en `float`. Tous les éléments *suivants* celui que nous avons mis en `float` essaieront de se déplacer à côté de lui ou n'apparaîtront pas comme prévu, car nous avons perturbé le flux d'empilement normal. Le contenant parent s'effondrera aussi.
+            **Cependant**, nous brisons le *flux d'empilement normal* en mettant un élément en `float`. Tous les éléments *suivants* celui que nous avons mis en `float` essaieront de se déplacer à côté de lui ou n'apparaîtront pas comme prévu, car nous avons perturbé le flux d'empilement normal. Le contenant bougera aussi.
 
             **Aussi**, si aucune largeur n'est définie, l'élément flottera, mais la largeur sera automatiquement la largeur de son contenu.
-        </section>
-        <section class="slide centered">
-            <img src="framework/img/workshop/shittier.gif">
-            <h2 class="delayed">C'est une blague! On peut régler tout ça.</h2>
-        </section>
-
-        <section class="slide">
-            <h2>Float, Clear and Clearfix</h2>
-            <p>D'abord, nous devons le briser, et ensuite le réparer. Un des concepts CSS qui portent le plus à confusion est à quel moment utiliser <code>clear:both</code> et la classe <code>.clearfix</code>. Règle d'or: si un élément suit l'élément mis en `float`, appliquez <code>clear: both</code> à cet élément. Si tous les éléments doivent être mis en `float`, appliquez la classe <code>.clearfix</code> à l'élément <em>parent</em>.</p>
-
-            <iframe width="100%" height="360" src="http://jsfiddle.net/ttt5ebhr/3/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-            <p>Ajoutons le snippet clearfix à notre fichier CSS afin de l'utiliser plus tard.</p>
-            <p>Vous voulez en savoir plus à propos de l'astuce du clearfix ainsi qu'à propos de la gestion des `floats`? Voilà :<br>
-            <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
-            <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
-            </p>
         </section>
 
         <section class="slide" data-markdown>
             ##Les sélecteurs enfant
 
-            **Sélecteur enfant** - Correspond à n'importe quel élément *descendant* de l'élément déclaré avant lui.
+            **Sélecteur enfant** - Correspond à n'importe quel élément *fils* de l'élément déclaré avant lui.
 
             ```css
             p a {
-                /* cible seulement les balises a imbriquées dans une balise p */
+                /* cible seulement les balises "a" imbriquées dans une balise "p" */
             }
             .classname a {
-                /* cible seulement les balises a imbriquées dans n'importe quel élément auquel nous avons attribué la classe classname */
+                /* cible seulement les balises "a" imbriquées dans n'importe quel élément auquel nous avons attribué la classe ".classname" */
             }
             ```
-            **Astuce:** Comme dans le film Inception, n'allez jamais à plus de trois niveaux de profondeur!
-
-            ```
-            nav ul li a span {
-                /* NOOOOOOOOOOO */
-            }
-            ```
-            N'hésitez pas à sauter un niveau, mais soyez conscients des règles de précision. Par exemple, `nav ul li a` l'emportera sur `nav a`. Il est généralement plus facile de commencer avec des sélecteurs moins précis et de les rendre plus précis si nécessaire plutôt que de commencer avec des sélecteurs très spécifiques et d'ajouter des sélecteurs supplémentaires pour essayer d'écraser leur style.
         </section>
 
         <section class="slide" data-markdown>
-##Exercice pratique: Floats
+            ##Exercice pratique: Floats
 
-1. Ajoutez un `float` à votre image de profil pour que le texte puisse l'entourer. Qu'arrive-t-il à l'élément parent quand un élément enfant est mis en `float`?
+            Ajoutez un `float` à votre image de profil pour que le texte puisse l'entourer. Qu'arrive-t-il à l'élément parent quand un élément enfant est mis en `float`?
 
-    ```
-    .profile img {
-        float: left;
-    }
-    ```
+            ```
+            .profile img {
+                float: left;
+            }
+            ```
+            Ajoutez la classe `clearfix` à l'élément parent.
+            Attribuez une grandeur relative à l'image et ajoutez une marge pour créer un espace entre l'image et le texte.
 
-2. Ajoutez la classe `clearfix` à l'élément parent.
+            ```
+            .profile img {
+                float: left;
+                width: 27%;
+                margin-right: 3%;
+            }
+            ```
 
-3. Attribuez une grandeur relative à l'image et ajoutez une marge pour créer un espace entre l'image et le texte.
-
-    ```
-    .profile img {
-        float: left;
-        width: 27%;
-        margin-right: 3%;
-    }
-    ```
-
-4. Si le texte est plus long que l'image, il l'entourera. Attribuez une largeur au sommaire du profil et mettez-le aussi en `float`. (Si vous voulez que le texte entoure l'image de profil, passez cette étape.)
-    ```
-    .summary {
-        width: 70%;
-        float: right;
-    }
-    ```
+            Si le texte est plus long que l'image, il l'entourera. Attribuez une largeur au sommaire du profil et mettez-le aussi en `float`. (Si vous voulez que le texte entoure l'image de profil, passez cette étape.)
+            ```
+            .summary {
+                width: 70%;
+                float: right;
+            }
+            ```
         </section>
 
         <section class="slide" data-markdown>
@@ -1225,7 +1199,7 @@ max-width: 1000px;</textarea>
 
             Dans le HTML, l'élément `.details` contient l'info qui doit être présenté à gauche et l'élément `.description` contient le contenu qui doit être affiché à droite. Les `floats` peuvent être utilisés pour accomplir ceci. N'oubliez pas, il est important d'attribuer une largeur aux éléments que nous mettons en `float`.
 
-            Que ce passe-t-il quand les éléments sont mis en `float`? L'**élément parent** s'effondre donc assurez-vous de *fixer* ceci aussi!
+            Que se passe-t-il quand les éléments sont mis en `float`? L'**élément parent** bouge donc assurez-vous de *fixer* ceci aussi!
 
             ```xml
             &lt;div class=&quot;item&quot;&gt;
@@ -1275,7 +1249,7 @@ max-width: 1000px;</textarea>
         </section>
 
         <section class="slide">
-            <h2>##Exercice #8: Arrière-plans, couleurs et bordures (20mins)</h2>
+            <h2>##Exercice #8: Arrière-plans, couleurs et bordures (15mins)</h2>
 
             <ol>
                 <li>Modifiez les sections <strong>Expérience de travail</strong> et<strong>Éducation</strong> avec la même couleur d'arrière-plan. L'exemple de projet utilise un gris très pâle (#fefefc).</li>
@@ -1290,7 +1264,7 @@ max-width: 1000px;</textarea>
             <a href="http://colours.neilorangepeel.com/">http://colours.neilorangepeel.com/</a> <br>
             <a href="http://flatuicolors.com/">http://flatuicolors.com/</a>  </p>
 
-            <p>Si vous restez bloqué, demandez à un mentor! Ne vous inquiétez pas si vous n'avez pas fini, nous passerons à travers tout ça ensemble en classe.</p>
+            <p>Si vous restez bloqué, demandez à un mentor! Ne vous inquiétez pas si vous n'avez pas fini. </p>
 
             <p>Votre page devrait ressembler à celle-ci: <a href="project/examples/8-bg.html">Exemple 8</a>.</p>
 
