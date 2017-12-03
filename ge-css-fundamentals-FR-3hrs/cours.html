@@ -97,14 +97,6 @@
           ![Projet final](framework/img/workshop/final-project.png)
       </section>
 
-      <section class="slide centered" data-markdown>
-          ##Voici un exemple de ce qui peut être
-          ##accompli grâce à un design en CSS !
-
-          ![](framework/img/workshop/css-zen-garden.png)
-
-          http://www.csszengarden.com/tr/francais/
-      </section>
 
       <section class="slide title dark" data-markdown>
         <script type="text/template">
@@ -257,8 +249,6 @@
 
           Puis, placez le curseur entre les balises pour ajouter le texte.
 
-          ![balises d'ouverture et de fermeture](framework/img/workshop/writing-html.gif)
-
           ---
           ###Astuce :
           Dans plusieurs éditeurs de texte, vous n'avez qu'à taper le **nom** de la balise et à appuyer sur « tab » pour créer la balise. Essayez ça en tapant `p` et en appuyant sur « tab »!
@@ -266,7 +256,7 @@
       </section>
 
       <section class="slide">
-          <h2>##Exercice #1: Personaliser le contenu (5-10 mins)</h2>
+          <h2>##Exercice #1: Personaliser le contenu (10 mins)</h2>
 
           <p>Ouvrez le fichier <strong>index.html</strong> et</p>
           <ol>
@@ -420,7 +410,7 @@
         <section class="slide" data-markdown>
             ##CSS: les valeurs de couleurs
 
-            **Mots clés** - Utiliser le réel nom de la couleur de base **en anglais, toujours**(red, green, blue, pink, etc). Il y en a même de surprenants comme "papayaWhip" et "paleGoldenrod"!
+            **Mots clés** - Utiliser le nom réel de la couleur de base **en anglais, toujours**(red, green, blue, pink, etc). Il y en a même de surprenants comme "papayaWhip" et "paleGoldenrod"!
             
             **RGB (red-green-blue)** - Utiliser cette combinaison de 3 valeurs numériques entre 0 et 255. 0 est le noir et 255 est le blanc. Voir ci-dessous pour la syntaxe adéquate.
             
@@ -460,7 +450,7 @@
             ###Externe/ (*External*)
             Créez un lien vers une feuille de style. Cette méthode est la plus recommandée, car elle permet de réellement séparer votre CSS (style) de votre HTML (contenu). Le lien vers votre feuille de style est inclue (*referenced*) dans le `&lt;head&gt;` de chacune de vos pages où votre style est requis. Ainsi, vous n'aurez besoin que de mettre à jour votre fichier CSS en fonction des nouveaux éléments que vous aurez besoin de styliser.
 
-            Pour inclure votre CSS dans l'élément `&lt;head&gt;`, vous devrez créer une balise `&lt;lien&gt;` avec 2 **attributs** `rel` et `href`. Tout comme lorsqu'on crée un lien normal, le `href` pointe le chemin où est situé le fichier.
+            Pour inclure votre CSS dans l'élément `&lt;head&gt;`, vous devrez créer une balise `&lt;link&gt;` avec 2 **attributs** `rel` et `href`. Tout comme lorsqu'on crée un lien normal, le `href` pointe le chemin où est situé le fichier.
             
             Même si ce n'est pas obligatoire, les fichiers CSS sont souvent sauvegardés dans un dossier nommé CSS dans un souci d'organisation. Si vous organisez vos dossiers, assurez-vous que vos liens sont créés en conséquence.
 
@@ -482,8 +472,10 @@
         <section class="slide" data-markdown>
             <h2>##Exercice #2: Ajoutez des arrière-plans de couleurs (10mins)</h2>
             
-            1. Dans VS Code, ouvrez **style.css** (il devrait être vide) situé dans **project > css **. Incluez le fichier dans votre document HTML.
-            2. Utilisez `background` avec différentes couleurs pour chaque section de votre page. Utilisez un **sélecteur d'élément** pour l'entête (*header*) et des **sélecteurs de classes** pour les sections. Puisqu'il y a plusieurs balises sections, vous devrez utiliser un sélecteur plus spécifique. Voici quelques idées pour vous aider à avancer:
+            1. Dans VS Code, ouvrez **style.css** (il devrait être vide) situé dans **project > css **. 
+
+            2. Incluez le fichier dans votre document HTML.
+            3. Utilisez `background` avec différentes couleurs pour chaque section de votre page. Utilisez un **sélecteur d'élément** pour l'entête (*header*) et des **sélecteurs de classes** pour les sections. Puisqu'il y a plusieurs balises sections, vous devrez utiliser un sélecteur plus spécifique. Voici quelques idées pour vous aider à avancer:
             
                 ```
                 header { }  
@@ -512,7 +504,9 @@
 
             <p>N'oubliez pas que si vous ajoutez une feuille de style *reset* ou *normalize*, il faut aussi l'inclure devant votre feuille de style personnalisée.</p>
 
-            <p>Ces différentes feuilles de style peuvent être téléchargées sur <a href="http://www.cssreset.com/">cssreset.com</a>, mais pour aujourd'hui cette étape a déjà été complétée pour vous dans le dossier <strong>project > css</strong>. Ajoutons le fichier à notre projet d'aujourd'hui (index.html).</p>
+            <p>Ces différentes feuilles de style peuvent être téléchargées sur <a href="http://www.cssreset.com/">cssreset.com</a>, mais pour aujourd'hui cette étape a déjà été complétée pour vous dans le dossier <strong>project > css</strong>. </p>
+            
+            </p><strong>Ajouter</strong> le fichier à notre projet d'aujourd'hui (index.html).</p>
             
             <div class="presenter-notes">
                 <p>Add the normalize file and discuss the differences and explain why normalize has to come before custom css.</p>
@@ -691,22 +685,21 @@ h3 {
             * Vous pouvez les consulter pour mieux les étudier.
             * Sélectionnez les graisses (*font weights*). Le plus vous en choisissez, plus votre page prendra du temps à charger.
             * Les caractères par défaut devraient contenir ce dont vous aurez besoin. Ne choisissez une option que si vous devez afficher une autre langue.
-            * Prennez le `&lt;lien&gt;` et ajoutez-le au `&lt;head&gt;` de votre page.
+            * Prennez le `&lt;link&gt;` et ajoutez-le au `&lt;head&gt;` de votre page.
             * Utilisez votre nouvelle police en utilisant la propriété `font-family` comme présentée dans l'exemple sur la *Google Fonts page* dans le  css de votre page.
 
             C'est tout !
         </section>
 
         <section class="slide">
-            <h2>##Exercice #3: Typographie (10mins)</h2>
+        <h2>Exercice #3: Typographie (10mins)</h2>
 
             <ol>
                 <li>Trouvez et ajouter 2-3 *font-families* sur <a href="http://www.google.com/fonts/">Google Fonts</a></li>
                 <li>Choisissez les polices &amp; typographies qui vous plaisent ! </li>
             </ol>
             
-            <p><a href="http://www.htmldog.com/guides/css/beginner/text/">Référence </a>sur les propriétés des éléments de texte en CSS, en Anglais<br>
-            Un exemple de générateur de CSS :<a href="http://csstypeset.com/">http://csstypeset.com</a></p>
+            <p><a href="http://www.htmldog.com/guides/css/beginner/text/">Référence </a>sur les propriétés des éléments de texte en CSS, en Anglais<br></p>
 
             <p>Besoin d'aide pour choisir une police ? Le projet, par exemple, utilise (sans-serif), Merriweather (serif), Pacifico (cursive).</p>
 
@@ -915,9 +908,9 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
         </section>
 
          <section class="slide" data-markdown>
-             <h2>##Exercice #4: Les contenants! (5 MINS)</h2>
+            <h2>##Exercice #4: Les contenants! (5 MINS)</h2>
 
-            La classe `.content-wrap` est présente dans chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
+             La classe `.content-wrap` est présente dans chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
 
              Puis appliquez les styles à `.content-wrap`. Ajoutez un peu de padding.
 
@@ -929,7 +922,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
              }
              ```
 
-            Votre page devrait ressembler à quelque chose comme ça: [exemple 4](project/examples/4a-content-wrap.html).
+             Votre page devrait ressembler à quelque chose comme ça: [exemple 4](project/examples/4a-content-wrap.html).
 
         </section>
 
@@ -1014,14 +1007,14 @@ max-width: 1000px;</textarea>
 
             Votre en-tête devrait ressembler à l'[exemple 5](project/examples/5-header.html):
 
-            ![header](framework/img/workshop/header.jpg)
+            
         </section>
 
         <section class="slide">
-            <h2>C'est l'heure du lunch</h2>
+            <h2>C'est la pause !</h2>
 
             <p>Vous avez besoin d'un peu de temps pour regarder votre travail?</p>
-            <p>Allez voir dans le dossier d'<strong>exemples</strong>. Nous sommes rendus à <strong>5-header.html</strong> &amp; <strong>5-header.css</strong>.</p>
+            <p>Allez voir dans le dossier d'<strong>exemples</strong>. Nous sommes arrivés à <strong>5-header.html</strong> &amp; <strong>5-header.css</strong>.</p>
             <p>Aussi, vous pouvez vous préparer pour le prochain exercice en trouvant deux images à utiliser comme arrière-plan pour votre page ou simplement en choisir dans le dossier images inclus dans <strong>projet > images</strong>. Voici le lien vers le <a href="project/final.html">projet final pour référence</a>.</p>
             <p>Quelques ressources gratuites pour des images</p>
             <ul>
@@ -1043,7 +1036,7 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ##Exercice pratique: Les images d'arrière-plan
 
-            Jusqu'à maintenant, nous avons utilisé `background` pour les couleurs, mais la même propriété peut être utilisée pour régler une image d'arrière-plan.
+            Jusqu'à maintenant, nous avons utilisé `background` pour les couleurs, mais la même propriété peut être utilisée pour avoir une image d'arrière-plan.
 
             ```
             background-image: url(path/to/file.jpg); /* longhand */
@@ -1056,7 +1049,7 @@ max-width: 1000px;</textarea>
             ```
             background: url(../images/background-1.jpg);
             ```
-            Voyez comment l'image se répète? Réglons cela tout de suite.
+            Voyez-vous comment l'image se répète? Arrangeons cela tout de suite.
         </section>
         <section class="slide" data-markdown>
             ##Exercice pratique: Les images d'arrière-plan (suite)
