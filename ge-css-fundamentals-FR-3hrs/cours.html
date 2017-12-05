@@ -182,7 +182,7 @@
               <!-- ![](framework/img/workshop/2-setup.png) -->
           1. Le contenu du dossier apparaîtra dans la section de gauche de VS Code. Double cliquez sur **index.html** pour l'ouvrir.
               <!-- ![](framework/img/workshop/3-setup.png) -->
-          1. Une fois dans le fichier **index.html** faites ctrl+MAJ+H. Cette action ouvrira le fichier HTML dans un nouvel onglet et vous permet de voir la page comme dans un navigateur.
+          1. Une fois dans le fichier **index.html** faites ctrl+MAJ+B . Cette action ouvrira le fichier HTML dans un nouvel onglet Chrome.
 
               ![](framework/img/workshop/4-setup.png)
 
@@ -256,7 +256,7 @@
       </section>
 
       <section class="slide">
-          <h2>##Exercice #1: Personaliser le contenu (10 mins)</h2>
+        <h2>##Exercice #1: Personaliser le contenu (10 mins)</h2>
 
           <p>Ouvrez le fichier <strong>index.html</strong> et</p>
           <ol>
@@ -469,7 +469,7 @@
             **Indice de pro!**  Raccourci VS Code : tapez "link" + touche 'tab'. Ta da!
         </section>
 
-        <section class="slide" data-markdown>
+        <section class="slide">
             <h2>##Exercice #2: Ajoutez des arrière-plans de couleurs (10mins)</h2>
             
             1. Dans VS Code, ouvrez **style.css** (il devrait être vide) situé dans **project > css **. 
@@ -692,7 +692,7 @@ h3 {
         </section>
 
         <section class="slide">
-        <h2>Exercice #3: Typographie (10mins)</h2>
+        <h2>##Exercice #3: Typographie (10mins)</h2>
 
             <ol>
                 <li>Trouvez et ajouter 2-3 *font-families* sur <a href="http://www.google.com/fonts/">Google Fonts</a></li>
@@ -882,7 +882,7 @@ margin: 0 auto;</textarea>
         <section class="slide" data-markdown>
 ##Continuons l'exercice
 
-Le contenu est centré, mais l'arrière-plan (*background colour*) est restreint par la taille et il ne s'étire plus sur toute la page. Pour arranger ça, nous devrons créer un conteneur qui servira à permettre l'alignement du contenu par l'ajout d'une nouvelle `div` avec la classe `content-wrap` pour contenir ce qui a trait au profil.
+Le contenu est centré, mais l'arrière-plan (*background colour*) est restreint par la taille et il ne s'étire plus sur toute la page. Pour arranger ça, nous devrons créer un conteneur qui servira à aligner le contenu grace à l'ajout d'une nouvelle `div` avec la classe `content-wrap` pour contenir ce qui a trait au profil.
 
 ```
 &lt;section class="profile"&gt;
@@ -910,9 +910,9 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
          <section class="slide" data-markdown>
             <h2>##Exercice #4: Les contenants! (5 MINS)</h2>
 
-             La classe `.content-wrap` est présente dans chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
+            La classe `.content-wrap` est présente dans chaque section * sauf * le `header`. Nous expliquerons pourquoi l'en-tête n'en a pas besoin très bientôt.
 
-             Puis appliquez les styles à `.content-wrap`. Ajoutez un peu de padding.
+            Puis appliquez les styles à `.content-wrap`. Ajoutez un peu de padding.
 
              ```
              .content-wrap {
@@ -927,7 +927,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
         </section>
 
         <section class="slide">
-            <h2>width &amp; max-width, px vs %</h2>
+            <h2>width &amp; max-width, px ou % ?</h2>
             <p>Le contenu est maintenant beau et centré, mais que se passe-t-il lorsque la fenêtre du navigateur est plus petite que la largeur établie? Regardons la différence entre les propriétés <code>max-width</code> et <code>width</code> ainsi que l'utilisation de pourcentages et de pixels.</p>
 
             <p>Réduisez la taille de la fenêtre et voyez comment la boîte répond. Remplacez ensuite la largeur par un pourcentage inférieur à 100 % et essayez à nouveau.</p>
@@ -1252,12 +1252,12 @@ max-width: 1000px;</textarea>
             <h2>##Exercice #8: Arrière-plans, couleurs et bordures (15mins)</h2>
 
             <ol>
-                <li>Modifiez les sections <strong>Expérience de travail</strong> et<strong>Éducation</strong> avec la même couleur d'arrière-plan. L'exemple de projet utilise un gris très pâle (#fefefc).</li>
-                <li>Modifiez la couleur de la police d'écriture des sections Profil, Compétences &amp; Contact à blanc ou #ffffff. (Essayez de combiner les sélecteurs pour les styles partagés.)</li>
-                <li>Ajoutez une image d'arrière-plan à la section <strong>Compétences</strong>. Ne vous inquiétez pas à propos de l'effet de superposition pour l'instant, ajoutez simplement l'image.</li>
+                <li>Modifiez les sections <strong>Matières</strong> et <strong>Éducation</strong> avec la même couleur d'arrière-plan. L'exemple de projet utilise un gris très pâle (#fefefc).</li>
+                <li>Modifiez la couleur de la police d'écriture des sections <strong>Profil</strong>, <strong>Hobbies</strong> &amp; <strong>Contact</strong> à blanc ou #ffffff. (Essayez de combiner les sélecteurs pour les styles partagés.)</li>
+                <li>Ajoutez une image d'arrière-plan à la section <strong>Hobbies</strong>. Ne vous inquiétez pas à propos de l'effet de superposition pour l'instant, ajoutez simplement l'image.</li>
                 <li>Ajoutez un soulignement aux titres <code>&lt;h2&gt;</code>, de couleur #cccccc ou d'une couleur de votre choix </li>
                 <li>Modifiez la couleur d'arrière-plan de la section Contact. Utilisez #111111 ou une couleur de votre choix.</li>
-                <li>Choississez une couleur accent et appliquez-la à tous vos liens (élément <code>a</code>).</li>
+                <li>Choississez une couleur et appliquez-la à tous vos liens (élément <code>a</code>).</li>
             </ol>
 
             <p><strong>Inspiration de couleurs:</strong> <br>
@@ -1280,9 +1280,12 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ## Propriété CSS3: border-radius
 
-            L'introduction de CSS3 a apporté des nouvelles façons de faire ce qui était précédemment seulement possible de faire en Flash, JavaScript ou à l'aide de hack compliqué.
+            L'introduction de CSS3 a apporté des nouvelles façons de faire ce qui était précédemment seulement possible de faire à l'aide de code compliqué.
 
-            Commençons avec `border-radius`. Il était une fois, des coins ronds qui devaient être découpés depuis des images avec des fonds transparents et bla bla bla Zzzzz... Maintenant, nous pouvons le faire avec seulement une ligne de CSS! Ajoutez cette propriété à l'image de profil. Un pourcentage ou une valeur en pixels peuvent être utilisés. Le plus grand le nombre, le plus rond les coins seront. Pour obtenir un cercle parfait, réglez le `border-radius` à 50% et assurez-vous que l'image originale est un carré (sinon elle deviendra ovale).
+            Commençons avec `border-radius`. Ajoutez cette propriété à l'image de profil. Un pourcentage ou une valeur en pixels peuvent être utilisés. Plus grand le nombre, plus rond seront les coins. 
+            
+            Pour obtenir un cercle parfait, réglez le `border-radius` à 50% et assurez-vous que l'image originale soit un carré (sinon elle deviendra ovale).
+            
 
             ```
             .profile img {
@@ -1299,7 +1302,7 @@ max-width: 1000px;</textarea>
             }
             ```
         </section>
-        <section class="slide" data-markdown>
+        <!--<section class="slide" data-markdown>
             ##CSS3 Les préfixes vendeurs
 
             Dans certains cas, une propriété CSS standard peut exiger l'ajout d'un préfixe spécifique à un navigateur. Par exemple, voici différents préfixes vendeurs pour différents navigateurs :
@@ -1314,12 +1317,12 @@ max-width: 1000px;</textarea>
             * [css3please.com](http://css3please.com/)
             * [-prefix-free](http://leaverou.github.io/prefixfree/) - note, doesn't work **locally** in Chrome.
             * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
-        </section>
+        </section>-->
 
         <section class="slide">
             <h2>Modification du titre du Profil</h2>
 
-            <p>Modifions la balise <code>&lt;h2&gt;</code> de la section Profil et donnons-lui un style différent des autres titres. Premièrement, nous allons outrepasser la bordure du dessous. Nous devons utiliser un sélecteur spécifique à la section Profil. Aussi, ajoutons une couleur d'arrière-plan. Essayez d'utiliser votre couleur accent.</p>
+            <p>Modifions la balise <code>&lt;h2&gt;</code> de la section Profil et donnons-lui un style différent des autres titres. Premièrement, nous allons outrepasser la bordure du dessous. Nous devons utiliser un sélecteur spécifique à la section Profil. Aussi, ajoutons une couleur d'arrière-plan. Essayez d'utiliser votre couleur accent, couleur utilisée pour les liens.</p>
 <pre><code>.profile h2 {
     border: none;
     background: #2980b9;
@@ -1368,7 +1371,7 @@ p:hover {
         </section>
 
         <section class="slide" data-markdown>
-            <h2>##Exercice #9: hover & transition -- TO BE REMOVED --</h2>
+            <h2>##Exercice #9: hover & transition (bonus)</h2>
 
             Ajoutez la propriété transition à l'effet hover et essayez de mettre votre curseur sur vos liens.
 
@@ -1384,7 +1387,25 @@ a:hover {
 }
 ```
        
+</section>
+<section class="slide" data-markdown>
+        ##Les prochaines étapes
 
+        Même si nous avons couvert un tas de matériel aujourd'hui, il existe encore plein de façons de personnaliser et polir votre CV HTML. Voici quelques options supplémentaires que vous pouvez essayer:
+        1. Les gradients.
+
+        2. Les positions des éléments d'une liste. 
+        
+        3. L'exemple final a une option de cercle pour présenter vos compétences. Voyez les instructions [ici](framework/extras-circles.html).
+
+        4. Essayez un peu plus d'[effet d'animation](framework/extras-animations.html).
+
+        5. Ajoutez un [favicon](http://blog.teamtreehouse.com/how-to-make-a-favicon).
+
+        6. Stylisez votre lien de téléchargement comme un bouton. [Voyez les instructions ici](framework/extras-download-btn.html).
+
+        Aussi, il y a plusieurs façons de sélectionner des éléments qui vont plus loin que les sélecteurs enfant, les classes et les ids. Voyez quelques exemples [ici](framework/extras-advanced-selectors.html).
+    </section>
         <section class="slide">
             <h2>Gradients</h2>
 
@@ -1567,21 +1588,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
             ![](framework/img/workshop/now-what.gif)
         </section>
 
-        <section class="slide" data-markdown>
-            ##Les prochaines étapes
-
-            Même si nous avons couvert un tas de matériel aujourd'hui, il existe encore plein de façons de personnaliser et polir votre CV HTML. Voici quelques options supplémentaires que vous pouvez essayer:
-
-            1. L'exemple final a une option de cercle pour présenter vos compétences. Voyez les instructions [ici](framework/extras-circles.html).
-
-            2. Essayez un peu plus d'[effet d'animation](framework/extras-animations.html).
-
-            3. Ajoutez un [favicon](http://blog.teamtreehouse.com/how-to-make-a-favicon).
-
-            4. Stylisez votre lien de téléchargement comme un bouton. [Voyez les instructions ici](framework/extras-download-btn.html).
-
-            Aussi, il y a plusieurs façons de sélectionner des éléments qui vont plus loin que les sélecteurs enfant, les classes et les ids. Voyez quelques exemples [ici](framework/extras-advanced-selectors.html).
-        </section>
+      
 
         <section class="slide" data-markdown>
             ##Resources
