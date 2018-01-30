@@ -46,8 +46,9 @@
           <ol class="downloads">
             <li>Fichiers pour le cours (zip file): <a href="https://github.com/CelineBen/codeetfilles/raw/master/ge-css-fundamentals-FR-3hrs/master.zip">http://bit.ly/2zCFoYB</a>
               <ul>
-                <li>dézipper le fichier (<em>Tout extraire</em> si vous utilisez un PC)</li>
-                <li>ouvrir <strong>cours.html</strong> dans le navigateur pour voir la présentation</li>
+                <li>Dézipper le fichier (<em>Tout extraire</em> si vous utilisez un PC)</li>
+                <li>Ouvrir le <strong>cours.html</strong> à partir de ce liens http://bit.ly/2DNo2qC dans le navigateur pour voir la présentation</li>
+                <li>Ouvrir le <strong>index.html</strong> dans Chrome</li>
               </ul>
             </li>
             <li>VS CODE: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
@@ -91,6 +92,9 @@
 
       <section class="slide centered" data-markdown>
           ##Votre futur projet
+          A partir d’une page pré-écrite en html et de façon très ludique, vous aller modifier et personnaliser cette page.
+          
+          A la fin du cours, vous pourrez utiliser les balises html et créer des profils CSS pour vos propres pages web sur le réseaux. 
 
           Suivez [ce lien](project/final.html) pour voir le projet en entier!
 
@@ -109,7 +113,7 @@
         <script type="text/template">
           ##Les navigateurs
 
-          La fonction principale d'un navigateur est de présenter la  **ressource web** de votre choix dans la fenêtre de navigation lorsque vous sollicitez un serveur web. La ressource web est généralement un document HTML, mais il peut s'agir d'un PDF, d'une image ou d'un autre type de document.
+          La fonction principale d'un navigateur (ou browser en Anglais) est de présenter la  **ressource web** de votre choix dans la fenêtre de navigation lorsque vous sollicitez un serveur web. La ressource web est généralement un document HTML, mais il peut s'agir d'un PDF, d'une image ou d'un autre type de document.
 
           Avec [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html) (et avec d'autres navigateurs), vous pouvez observer la page source de *n'importe quelle* page web. Clique droit sur la page du navigateur et cliquez sur **Afficher le code source de la page**. Ce que vous voyez est de l'HTML!
 
@@ -175,7 +179,7 @@
 
           Ouvrons nos fichiers de projet dans un navigateur et dans notre éditeur de code.
           <!--TODO See if laptops will be FR / EN formatted ?-->
-          1. Ouvrez VS Code et cliquez sur **Fichier > Ouvrir**  **Fichier > Ouvrir**.
+          1. Ouvrez VS Code et cliquez sur **Fichier > Ouvrir**  **Répertoire > Ouvrir**.
 
               ![](framework/img/workshop/1-setup.png)
           1. Sélectionnez le dossier **Project** (dans le dossier que vous avez téléchargé aujourd'hui). Sélectionner le dossier en entier et cliquez **Ouvrir**.
@@ -200,14 +204,14 @@
           3. Rafraîchissez le navigateur
           4. Recommencez
 
-          Essayons de remplacer « Votre nom ici » par *votre* nom!
+          Essayons de remplacer « Ton prénom et ton nom » par *votre* nom!
           ```
-          <h1>Votre nom ici</h1>
+          <h1>Ton prénom et ton nom </h1>
           ```
           ---
           ###Astuce : Utilisez des touches de raccourci.
-          * **CTRL + S** pour sauvegarder
-          * **CTRL + R** pour rafraîchir le navigateur
+          * **CTRL + S** pour sauvegarder - à faire dans Visual Studio
+          * **CTRL + R** pour rafraîchir le navigateur - à faire dans Chrome
 
           <div class="presenter-notes">
             Dites eux apprenants qu'il y aura bientôt un exercice pour mettre à jour toute la page. Cette diapositive ne sert qu'à leur faire découvrir la procédure de mise à jour/sauvegarde/rafraîchissement et ralentir un peu le rythme du cours.
@@ -405,6 +409,7 @@
             class="content_wrapper"
             class="contentWrapper"
             ```
+            ![](framework/img/workshop/camel.png)
         </section>
             
         <section class="slide" data-markdown>
@@ -935,7 +940,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
             <p>Le contenu est maintenant beau et centré, mais que se passe-t-il lorsque la fenêtre du navigateur est plus petite que la largeur établie? Regardons la différence entre les propriétés <code>max-width</code> et <code>width</code> ainsi que l'utilisation de pourcentages et de pixels.</p>
 
             <p>Réduisez la taille de la fenêtre et voyez comment la boîte répond. Remplacez ensuite la largeur par un pourcentage inférieur à 100 % et rafraichir votre page web dans Chrome.</p>
-
+            <p> Bouh, c’est pas beau ...</p>
             <textarea class="snippet" data-subject="#widths">border: 1px solid black;
 margin: 0 auto;
 width: 100%;
@@ -1146,9 +1151,12 @@ max-width: 1000px;</textarea>
 
             Les floats CSS peuvent flotter à gauche ou à droite.
 
-            **Cependant**, nous brisons le *flux d'empilement normal* en mettant un élément en `float`. Tous les éléments *suivants* celui que nous avons mis en `float` essaieront de se déplacer à côté de lui ou n'apparaîtront pas comme prévu, car nous avons perturbé le flux d'empilement normal. Le contenant bougera aussi.
+            **Cependant**, nous brisons le *flux d'empilement normal* en mettant un élément en `float`. Tous les éléments *suivant* celui que nous avons mis en `float` essaieront de se déplacer à côté de lui ou n'apparaîtront pas comme prévu, car nous avons perturbé le flux d'empilement normal. Le contenant bougera aussi.
 
             **Aussi**, si aucune largeur n'est définie, l'élément flottera, mais la largeur sera automatiquement la largeur de son contenu.
+            ![](framework/img/workshop/6-withoutFloat.png)
+            
+            ![](framework/img/workshop/7-withFloat.png)
         </section>
 
         <section class="slide" data-markdown>
