@@ -823,7 +823,7 @@ margin: 0 0 0 0;</textarea>
         </section>-->
 
         <section class="slide" data-markdown>
-            ##Vous aurez besoins aussi du *Box Sizing border box*!
+            ##Vous aurez besoin aussi du *Box Sizing border box*!
             
             On va le voir pendant les exercices, les modifications des borders, paddings et margins entrainent des problèmes d'affichage.
             Heureusement il y a une solution. Utilisez [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) !
@@ -839,6 +839,7 @@ margin: 0 0 0 0;</textarea>
                 box-sizing: inherit;
             }
             ```
+            TODO Rajouter du text ici pour expliquer
             ![box model diagram](framework/img/workshop/box-model-fix.gif)
         </section>
 
@@ -940,6 +941,7 @@ Puis appliquez les styles à `.content-wrap` au lieu de `.profile`. Ajoutez un p
             <p>Le contenu est maintenant beau et centré, mais que se passe-t-il lorsque la fenêtre du navigateur est plus petite que la largeur établie? Regardons la différence entre les propriétés <code>max-width</code> et <code>width</code> ainsi que l'utilisation de pourcentages et de pixels.</p>
 
             <p>Réduisez la taille de la fenêtre et voyez comment la boîte répond. Remplacez ensuite la largeur par un pourcentage inférieur à 100 % et rafraichir votre page web dans Chrome.</p>
+            <p>Essayer 1% ou 10px pour width.</p>
             <p> Bouh, c’est pas beau ...</p>
             <textarea class="snippet" data-subject="#widths">border: 1px solid black;
 margin: 0 auto;
@@ -1053,12 +1055,14 @@ max-width: 1000px;</textarea>
             ```
             Étant donné que votre fichier CSS est à l'*intérieur* d'un dossier, utilisez `../` pour *sortir* du dossier et accéder au fichier d'images. (`..` représente le dossier parent du dossier courant.)
 
-            Maintenant, ajoutons une image d'arrière-plan au `body` de notre page. Vous pouvez choisir une image parmi celles situées dans le dossier **projet > images**.
+            Maintenant, ajoutons une image d'arrière-plan au `body`* de notre page. Vous pouvez choisir une image parmi celles situées dans le dossier **projet > images**.
 
             ```
             background: url(../images/background-1.jpg);
             ```
             Voyez-vous comment l'image se répète ? Arrangeons cela tout de suite.
+            
+            *Une page html est composée au moins d'une balise head et d'une balise body qui contient les éléments de la page.
         </section>
         <section class="slide" data-markdown>
             ##Exercice pratique: Les images d'arrière-plan (suite)
