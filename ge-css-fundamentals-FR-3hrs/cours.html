@@ -826,7 +826,7 @@ margin: 0 0 0 0;</textarea>
             ##Vous aurez besoin aussi du *Box Sizing border box*!
             
             On va le voir pendant les exercices, les modifications des borders, paddings et margins entrainent des problèmes d'affichage.
-            Heureusement il y a une solution. Utilisez [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) !
+            Heureusement il y a une solution. Utilisez [box-sizing: border-box](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) !
 
             Nous vous recommandons d'ajouter cette déclaration à tous vos projets :
 
@@ -839,8 +839,8 @@ margin: 0 0 0 0;</textarea>
                 box-sizing: inherit;
             }
             ```
-            TODO Rajouter du text ici pour expliquer
-            ![box model diagram](framework/img/workshop/box-model-fix.gif)
+            ![box model diagram](framework/img/workshop/box-model-issue.png)
+            ![box model diagram](framework/img/workshop/box-model-fix.png)
         </section>
 
         <!--<section class="slide">
@@ -861,7 +861,8 @@ margin: 0px; /* change to negative value */</textarea>
             <h2>Aligner au centre grâce aux marges</h2>
             <p>La propriété *margin* peut aussi être utilisée pour centrer horizontalement un élément de type block. (Nous reviendrons sur les types "block"). D'abord, déclarez *margin*, puis définissez les valeurs de gauche &amp; et de droite right à <code>auto</code> ce qui va centrer votre élément. Le <code>0</code>  correspond aux marges du haut et du bas.</p>
 
-            <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
+            <textarea class="snippet" data-subject="#margin-auto">
+background-color: lightblue;
 height: 100px;
 width: 600px;
 margin: 0 auto;</textarea>
