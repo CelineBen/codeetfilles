@@ -1,0 +1,53 @@
+/* override theme-llc and ge-theme colors
+*/
+
+/* theme vert pour differencier des autres versions */
+body {
+  color: #222222;
+  border-top: 4px solid #066106;
+  background: #e6ffe6;
+}
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: 300;
+  }
+}
+
+h1, h2 {
+  color: #066106;
+}
+
+section h1, section h2 {
+  color: #066106;
+}
+.welcome h2 {
+  color: #066106;
+}
+a:hover {
+  color: #066106;
+}
+
+footer i {
+  color: #066106;
+}
+
+/* Base styles for slides
+--------------------------*/
+
+/* First/Intro slide
+---------------------*/
+.intro .title-bg {
+  background: rgba(177, 9, 170, 0.8);
+}
+.intro h2 span {
+  color: #066106;
+}
+
+/* Liens Utiles 1 pager
+---------------------*/
+.mini-img {
+	/*width:32px;*/
+	height:32px;
+	margin-left:30px;
+}
