@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="framework/css/font-awesome.css">
     <link rel="stylesheet" href="framework/css/highlightjs-themes/monokai.css">
     <link rel="stylesheet" href="framework/css/theme-llc.css">
-    <link rel="shortcut icon" href="ge-theme/img/favicon.png">
+	<link rel="shortcut icon" href="ge-theme/img/favicon.png"> <!-- pour theme vert: favicon_green.png -->
 
     <!-- Workshop-specific styles -->
     <link rel="stylesheet" href="framework/css/workshop.css">
     <link rel="stylesheet" href="ge-theme/ge-theme.css">
 
+    <!-- Belfort: theme vert pour différencier des autres versions 
+    <link rel="stylesheet" href="ge-theme/belfort-theme.css"> -->
+ 
     <!-- Takes care of CSS3 prefixes! -->
     <script src="framework/scripts/prefixfree.min.js"></script>
   </head>
@@ -44,15 +47,15 @@
 
           <h2>Téléchargez<br> & Installez</h2>
           <ol class="downloads">
-            <li>Fichiers pour le cours (zip file): <a href="https://github.com/CelineBen/codeetfilles/raw/master/ge-css-fundamentals-FR-3hrs/master.zip">http://bit.ly/2zCFoYB</a>
+            <li>Fichiers pour le cours (zip file): <a href="https://github.com/helenecGE/codeetfilles/raw/master/ge-css-fundamentals-FR-3hrs/ge-css-fundamentals-FR-belfort.zip">ZIP (session de Belfort)</a>
               <ul>
                 <li>Dézipper le fichier (<em>Tout extraire</em> si vous utilisez un PC)</li>
-                <li>Ouvrir le <strong>cours.html</strong> à partir de ce liens http://bit.ly/2DNo2qC dans le navigateur pour voir la présentation</li>
-                <li>Ouvrir le <strong>index.html</strong> dans Chrome</li>
+				<li>Ouvrir le <strong>cours.html</strong> dans chrome<br/>Flèches pour dérouler les pages du cours</li>
+                <li>Ouvrir le HTML qu'on va modifier en exercices <strong>project/index.html</strong> dans Chrome</li>
               </ul>
             </li>
             <li>VS CODE: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
-            <li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.fr/chrome</a></li>
+			<li>Navigateur Chrome: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.fr/chrome</a><br/> (si besoin <a href="https://support.google.com/chrome/answer/95417?hl=fr">instructions pour mettre Chrome en navigateur par défaut</a>)</li>
           </ol>
         </div>
       </section>
@@ -65,12 +68,12 @@
             <!-- if needed -->
             <span class="title-bg">Pour les débutantes</span>
           </h1>
-          <h2><span>avec</span>Yasmine et Labiba</h2>
+          <h2><span>avec</span>Najat et Hélène</h2>
 
           <img class="instructor-img" src="framework/img/profile-generic2.png" >
           <ul>
-            <li><i class="fa fa-envelope"></i><a href="mailto:">bonjour@mail.com</a></li>
-            <li><i class="fa fa-desktop"></i><a href="http://">site-web.com</a></li>
+            <li><i class="fa fa-envelope"></i><a href="mailto:code.filles-belfort@ge.com">code.filles-belfort@ge.com</a></li>
+            <li><i class="fa fa-desktop"></i><a href="https://github.com/CelineBen/codeetfilles">github.com/CelineBen/codeetfilles</a></li>
             <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@moi</a></li>
           </ul>
         </div>
@@ -238,26 +241,126 @@
           ```
 
           Les *balises* HTML décrivent le contenu pour le navigateur Web.
+              
           ```
+        
           <h1>Cette balise est un en-tête</h1>
           <p>Cette balise est pour les paragraphes.</p>
           ```
+         </script>
+      </section>
+	  <!-- CHH debut ajout quelques notions HTML -->
+      <section class="slide" data-markdown>
+        <script type="text/template">
+            ##Document HTML de base
+
+            On retrouve toujours ces balises dans les pages Web
+            <ul>
+                <li>**!DOCTYPE**: indique au navigateur la version du HTML dans laquelle la page a été écrite. </li>
+                <li>**head**: ressources utiles à la page</li>
+                <li>**body**: contenu de la page</li>
+            </ul>
+            <pre><code>&lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;fr&quot;&gt;
+            &lt;!-- ceci est un COMMENTAIRE --&gt;
+              &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;title&gt;&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;!-- contenu de la page ici --&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+            </code></pre>
         </script>
       </section>
 
       <section class="slide" data-markdown>
         <script type="text/template">
+              ##eléments et attributs
+              
+              On appelle
+              <ul>
+                <li>**ELEMENT** l'ensemble  (contenu + ses balises ouvrantes et fermantes).</li>
+                <li> **ATTRIBUT** une propriété d'un ELEMENT</li>
+              </ul>
+              La syntaxe pour les propriétés est `attribut="valeur"`.        Notez les doubles quotes!
+              ```xml
+                   <tag attribut_1="valeur_X" ... attribut_N="valeur_N" >... contenu  de l'element nommé tag ...</tag>
+              ```
+              
+        </script>
+      </section>
+
+      <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Hiérarchie des balises HTML
+
+        Quand les balises HTML sont emboîtées, celles-ci développent une hiérarchie ressemblant à celle d'une famille avec des ancêtres, des parents, des enfants, des frères, etc.
+        
+        ```xml
+        <parent>
+          <enfant></enfant>
+        </parent>
+        ```    
+
+          Assurer vous que les balises sont bien emboitées.
+          
+        ```xml
+        <parent>
+          <enfant>
+            <petite-fille></petite-fille>
+            <petit-fils>
+          </enfant>
+          </petit-fils>  <!-- INCORRECT! petit-fils doit être fermé à l'intérieur de enfant !!! -->
+        </parent>
+        ```    
+        En emboîtant des balises, faites une indentation (tab) dans le code pour en faciliter la lecture et éviter les erreurs d'emboitement.
+        </script>
+      </section>
+
+      <section class="slide" data-markdown>
+        <script type="text/template">
+            ##HTML - les balises que nous utiliserons ensemble
+
+            Balises de l'élément **`<head>`**
+            <ul>
+               <li>**`<link>`** Lien vers des ressources externes utiles au document (par exemple un fichier css) </li>
+               <li>**`<title>`** Le titre du document: affiché dans l'onglet du navigateur, dans les marque-pages et les résultats de recherche</li>
+               <li>**`<meta>`** Informations sur le document, non visibles mais utiles au navigateur</li>
+            </ul>
+            Balises de contenu dans l'élément **`<body>`**
+            <ul>
+               <li>**`<h(i)>`** Titres de niveau (i): `<h1>` titre1,`<h2>` titre2, ... `<h6>` titre6</li>
+               <li>**`<p>`** Paragraphe</li>
+               <li>**`<a href="`**`...url(l'adresse exacte du lien)">...le texte du lien...</a>` Lien hypertexte (A de Anchor en anglais)</li>
+               <li>**`<img src="`**`là où se trouve l'image" />` Image</li>
+               <li>**`<div>`** Conteneur d'autres éléménts (utile pour la mise en forme - on le verra avec CSS)</li>
+               <li>**`<section>`** Similaire à `<div>`, pour organiser des chapitres dans le document</li>
+            </ul>
+
+            Il existe d'autres balises: voir [HTML Références par catégories (www.w3schools.com)](https://www.w3schools.com/tags/ref_byfunc.asp)
+
+
+        </script>
+      </section>
+	  <!-- CHH fin ajout quelques notions HTML -->
+
+	  <section class="slide" data-markdown>
+        <script type="text/template">
           ##Écrire du HTML
 
-          Pour vous assurer que vos balises sont bien fermées et pour minimiser les erreurs, écrivez les chevrons d'ouverture et de fermeture *en premier*.
-
-          Puis, placez le curseur entre les balises pour ajouter le texte.
+          Pour vous assurer que vos balises sont bien fermées et pour minimiser les erreurs, écrivez les chevrons d'ouverture et de fermeture *en premier*.<br/>          Puis, placez le curseur entre les balises pour ajouter le texte.
 
           ---
           ###Astuce :
           Dans plusieurs éditeurs de texte, vous n'avez qu'à taper le **nom** de la balise et à appuyer sur « tab » pour créer la balise. Essayez ça en tapant `p` et en appuyant sur « tab »!
+        ![emboîter des balises](framework/img/workshop/writing-nested-tags.gif)
+
+
         </script>
       </section>
+
 
       <section class="slide">
         <h2>##Exercice #1: Personaliser le contenu (5 mins)</h2>
@@ -587,7 +690,8 @@ font-size: inherit;
 font-weight: normal;
 text-transform: inherit;
 color: #222222;</textarea>
-            <div id="typography-example" class="example">
+			<!--<div id="typography-example" class="example">-->
+            <div id="typography-example" >
                 <p>Un peu de texte pour tester les styles ci-haut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
             </div>
 
@@ -728,17 +832,158 @@ h3 {
 
             Le navigateur voit chaque élément HTML comme une boîte rectangulaire. Le modèle de la boîte CSS décrit la façon dont fonctionnent les styles CSS de taille et d'espacement. Comprendre le modèle de la boite est fondamental pour comprendre comment positionner des éléments en CSS pour recréer la  structure que vous désirez. C'est une des parties plus complexes du CSS, ne vous en faites pas !
            
-            Le CSS utilise 5 propriétés pour déterminer la taille et l'espacement des boîtes.
+            Le CSS utilise 5 propriétés pour déterminer la taille et l'espacement des boîtes, que nous allons détailler ensemble.
 
 
+<!-- CHH debut ignore
             * `margin` - ajouter/enlever de l'espace *en dehors* de l'élément
             * `padding` - ajouter/enlever de l'espace *à l'intérieur* de l'élément
             * `border` - ajoute une bordure *en dehors* de l'élément
             * `width` - peut être défini à une certaine taille 
             * `height` - peut être défini à une certaine taille
-
+-->
+ <!-- fin CHH ignore definition; aborder les unites globalement -->
                         ![box model](framework/img/workshop/box-model.gif)
-        </section>
+ 
+                        <!-- debut CHH unites abordé avant de detailler les proprietes  -->
+                        Les valeurs de ces propriétés peuvent être déclarées avec de nombreuses unités différentes. Les plus courantes sont en `px` (pixels) ou en `%` (pourcentage dans l'élément parent). Apprenez-en plus [ici](https://developer.mozilla.org/fr/docs/Web/CSS/length).
+                        <!-- fin CHH unites abordé avant -->
+                    </section>
+<!-- margin/padding/border : recup de la version llc qui est plus claire
+-->
+<section class="slide" data-markdown>
+        <script type="text/template">
+          ##Largeur et hauteur
+          
+          Les propriétés `width` (largeur) et `height` (hauteur) peuvent être déclarées dans le css.
+          
+          ```css
+          width: 500px; height: 50px;
+          ```
+
+          <textarea class="snippet" data-subject="#padding">background: lightblue;
+          font-size: 10px;
+          width: 500px; 
+          height: 50px;
+          </textarea>
+modifiez les valeurs et réduisez la taille de votre fenêtre:<br/>constatez les différences de réaction du rectangle bleu si utilisation de px ou %</p>
+          <div id="padding">est-ce que ce texte restera toujours dans le rectangle ?</div>
+         
+        </script>
+      </section> 
+      
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Remplissage
+          
+          Le remplissage (`padding`) ajoute / enlève de l'espace à l'**intérieur** de la boîte en utilisant des valeurs de 1 à 4. En indiquant une valeur de 0, le remplissage par défaut disparait.
+          
+          ```css
+          padding: 2px 2px 2px 2px; /*  haut, droit, bas, gauche */
+          padding: 2px 2px 2px; /*  haut, droit et gauche, bas */
+          padding: 2px 2px; /* haut et bas, droit et gauche */
+          padding: 2px; /* même quantité de remplissage de tous les côtés */
+          ```
+
+          Il existe également une version longue<br/>(utile si on ne veut pas tous les côtés identiques, sans avoir retenir dans quel ordre les 4 valeurs doivent être défines.)
+          ```css
+          /* version longue */
+          padding-top: 2px; padding-right: 30px; padding-bottom: 5px; padding-left: 200px;
+          ```
+          <textarea class="snippet" data-subject="#padding">background: lightblue;
+          padding: 20px;</textarea>
+          <div id="padding">essai de remplissage</div>
+
+
+        </script>
+      </section>
+      
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Marge
+          
+          La marge (`margin`) ajoute / enlève de l'espace **autour** de l'élément. Tout comme le remplissage, elle utilise des valeurs de 1 à 4 (version courte) ou 4 propriétés distinctes (version longue).
+          
+          ```css
+          /* version 1 propriété:1 à 4 valeurs - ici 2 valeurs = haut & bas    droite & gauche */
+          margin: 20px 40px; 
+          /* ou la version 4 propriétés distinctes */
+          margin-top: 30px; margin-right: 10px; margin-bottom: 50px; margin-left: 50%;
+          ```
+          <textarea class="snippet" data-subject="#margin">background: lightblue;
+          margin: 20px 40px;</textarea>
+          <div id="margin">essai de marge</div>
+
+        </script>
+      </section>
+      
+<!-- <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Remplissage et marge : version longue
+          
+          Tant la marge (`margin`) que le remplissage (`padding`) peuvent être déclarés en précisant un côté à l'aide de la version longue de la propriété.
+  
+
+          ```
+          margin-top: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          margin-left: 10px;
+          ```
+          
+          Par ailleurs, `margin` accepte les valeurs négatives, mais ce n'est pas le cas de `padding`.
+        </script>
+      </section> 
+-->
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Bordure
+          La propriété `border` (bordure) se situe entre `margin` et `padding` et crée un contour autour de l'élément.<br/> Elle sert à définir une épaisseur + un style + une couleur, là aussi en version détaillée ou condensée.
+  
+          ```
+          /* version courte */
+          border: 2px solid red;
+
+          /* version longue */
+          border-width: 2px;
+          border-style: solid;
+          border-color: red;
+
+          /* version longue (ici que pour le haut - même principe que ce qu'on a détaillé sur margin&padding */
+          border-top-width: 10px;
+          border-top-style: dotted;
+          border-top-color: green;
+  
+          ```
+          
+          <textarea class="snippet" data-subject="#border">background: lightblue;
+          margin: 10px 40px;
+          padding: 20px;
+          border: 2px solid red;</textarea>
+          <div id="border">essai de bordure</div>
+        </script>
+      </section> 
+  
+<!--
+      <section class="slide" data-markdown>
+        <script type="text/template">
+          ##Bordure
+          Comme pour le remplissage et la marge, il est possible de préciser un côté précis de l'élément.
+  
+          ```
+          /* version longue */
+          border-top-width: 2px;
+          border-top-style: solid;
+          border-top-color: red;
+  
+          /* version courte */
+          border-top: 2px solid red;
+          ```
+          
+          <textarea class="snippet" data-subject="#border">border-top: 2px solid red;</textarea>
+          <div id="border">essai de bordure</div>
+        </script>
+      </section> 
 
         <section class="slide">
             <h2>*Padding* et *Margin* (rembourrage et marges)</h2>
@@ -817,11 +1062,11 @@ margin: 0 0 0 0;</textarea>
 
         </section>
             
-        <!--<section class="slide centered" data-markdown>
+        XXX <section class="slide centered" data-markdown>
             ##Ishhhh.... :S
             ![](framework/img/workshop/cant-even.gif)
-        </section>-->
-
+        </section> XXX
+    -->
         <section class="slide" data-markdown>
             ##Vous aurez besoin aussi du *Box Sizing border box*!
             
@@ -873,7 +1118,7 @@ margin: 0 auto;</textarea>
         <section class="slide">
             <h2>Exercice en classe</h2>
             <ol>
-                <li>Ajoutez box-sizing: border-box à tous les éléments de la page. Voir la page précendente. <a href="cours.html#slide37">Rappel*</a></li>
+                <li>Ajoutez box-sizing: border-box à tous les éléments de la page. Voir la page précedente.</li>
                 <li>Retournez à votre projet et ajoutez <code>padding:1px</code> à la section <code>header</code> pour observer son comportement. Ouvrez l'inspecteur (outils de développement) dans Chrome et inspectez l'élément.</li>
                 <li>Le conteneur est trop large ! Utilisons <code>margin: 0 auto;</code> pour le centrer. Essayez ensuite d'ajouter du style à la section <code>.profile</code>, dans votre fichier CSS.</li>
             </ol>
@@ -972,7 +1217,7 @@ max-width: 1000px;</textarea>
             Nous avons créé un style réutilisable qui nous aidera à garder notre CSS propre. Nous pourrons donc appliquer cette classe à chaque endroit où ce style sera nécessaire.
         </section>
 
-       <!-- <section class="slide" data-markdown>
+       <section class="slide" data-markdown>
             ## Les dangers des "div-it aiguë"
 
             N'attrapez pas la "div-it aiguë". Utilisez les `&lt;div&gt;` pour *grouper* des élements qui seront stylisés ensemble en une seule section. Si vous devez styliser un seul élément, comme un `&lt;h1&gt;`, vous n'avez qu'à ajouter directement votre style à cet élément. Votre navigateur voit chaque élément comme un "boîte" donc il n'est pas nécessaire de mettre une boîte autour d'une boîte!
@@ -981,16 +1226,16 @@ max-width: 1000px;</textarea>
 
             ```xml
             &lt;div class=&quot;title&quot;&gt;
-                &lt;h1&gt;Heading&lt;/h1&gt;
+                &lt;h1&gt;Mon titre&lt;/h1&gt;
             &lt;/div&gt;
             ```
 
             peut devenir seulement
 
             ```xml
-            &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
+            &lt;h1 class=&quot;title&quot;&gt;Mon titre&lt;/h1&gt;
             ```
-        </section> -->
+        </section>
         <section class="slide centered" data-markdown>
             ##Éviter le gonflement de code
 
@@ -1630,7 +1875,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
             * [hover.com](hover.com/ladiescode)
             * [dreamhost.com](http://www.dreamhost.com/r.cgi?205190)
 
-            Pour mettre vos fichiers en ligne, vous aurez besoin dw téléverser vos fichiers vers votre serveur d'hébergement, nouvellement acheté ! Il y a quelques informations dont vous aurez besoin et elles sont généralement fournies par votre fournisseur d'hébergement.
+            Pour mettre vos fichiers en ligne, vous aurez besoin de téléverser vos fichiers vers votre serveur d'hébergement, nouvellement acheté ! Il y a quelques informations dont vous aurez besoin et elles sont généralement fournies par votre fournisseur d'hébergement.
 
             * FTP Address
             * Username
@@ -1650,11 +1895,12 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
                 <span class="title-bg">Les bases du CSS</span><br>
                 <span class="title-bg">pour débutantes</span>
             </h2>
-            <h3><span>avec</span> Yasmine et Labiba</h3>
+            <h3><span>avec</span> Najat et Hélène</h3>
+            <h3><span>et le support de</span> Alnour, Amani, Cyril, Federica, Fouad, Jerome, Sofiane et Thomas</h3>
 
             <img class="instructor-img" src="framework/img/profile-generic2.png" alt="Profile picture">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:">yasmine@ge.com</a></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:">code.filles-belfort@ge.com</a></li>
             </ul>
 
             <p class="attribution">Slidedecks créés avec <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> et <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
@@ -1665,7 +1911,7 @@ Voir plus bas pour le code final, mais seulement si vous êtes bloqué!
     <footer>
         <p class="license">
             <span> Du code et des filles by</span>
-            <img alt="Creative Commons License" src="ge-theme/img/ge_logo_purple.svg"/>
+			<img alt="Creative Commons License" src="ge-theme/img/ge_logo_purple.svg"/> <!-- pour theme vert: ge_logo_green.svg -->
             <!--<a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a>-->
         </p>
         <p class="instructions">Utilisez les flèches gauche <i class="fa fa-arrow-left"></i> et droite <i class="fa fa-arrow-right"></i> pour naviguer</p>

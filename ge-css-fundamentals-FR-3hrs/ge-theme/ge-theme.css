@@ -101,3 +101,9 @@ section h2 {
   min-width: 300px;
   width: 300px;
 }
+
+/** adaptation style comment (monokai.css) pas conforme au theme monokai de VSC mais pour plus de visibilité en projection */
+.comment {
+  color: #D6D6D6;
+  font-style: italic;
+}
